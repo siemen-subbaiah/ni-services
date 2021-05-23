@@ -65,7 +65,7 @@ nav {
 
 .hero-img-container::before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -199,15 +199,12 @@ li {
 @media (max-width: 600px) {
   /* HERO! */
   .hero-img {
-    width: 100%;
-    height: initial;
+    height: 90vh;
   }
+
   .nav-link {
     padding-left: 0 !important;
     padding: 1rem !important;
-  }
-  .carousel-caption {
-    display: none;
   }
 
   .mobile-hero {
@@ -215,12 +212,41 @@ li {
     display: block;
   }
 
+  .carousel-caption .w-50 {
+    width: 100% !important;
+  }
+
+  .carousel-caption h5 {
+    font-size: 0.92rem;
+  }
+  .carousel-caption h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption .hero-btn {
+    font-size: 1rem !important;
+  }
+
+  .carousel-caption {
+    text-align: start !important;
+    top: 12rem;
+    bottom: auto;
+    left: 1rem !important;
+  }
+
+  .carousel-control-next-icon {
+    display: none !important;
+  }
+  .carousel-control-prev-icon {
+    display: none !important;
+  }
+
   .main-heading {
     font-size: 2.7rem;
   }
 
   .info-heading {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     margin-left: initial;
   }
@@ -245,8 +271,15 @@ li {
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
-  .carousel-caption {
-    display: none;
+  .carousel-caption .w-50 {
+    width: 100% !important;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1rem;
+  }
+  .carousel-caption h1 {
+    font-size: 1.5rem;
   }
   .mobile-hero {
     margin: 1rem 0;

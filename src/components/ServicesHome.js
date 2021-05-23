@@ -11,7 +11,7 @@ const ServicesHome = () => {
   return (
     <section className="servies">
       <Container>
-        <h3 className="my-3 text-center">Our Services and research</h3>
+        <h3 className="mt-5 text-center">Our Services and research</h3>
         <Row>
           <Col lg={4} md={12}>
             <div className="service-h-card d-flex justify-content-around align-items-center">

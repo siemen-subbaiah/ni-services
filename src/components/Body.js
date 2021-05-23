@@ -6,11 +6,11 @@ import { RiArrowDropRightLine } from "react-icons/ri"
 
 const Body = () => {
   return (
-    <section className="info-section my-5">
+    <section className="info-section my-3 my-lg-5">
       <Container>
         <Row className="justify-content-center align-items-center">
-          <Col lg={6} className="order-2 order-lg-1">
-            <h4 className="info-heading text-center text-lg-start">
+          <Col lg={6}>
+            <h4 className="info-heading">
               Our vision is to provide best quality telemedicine services
               including <span className="color">teleradiology</span> and
               <span className="color"> telepathology</span>
@@ -63,7 +63,7 @@ const Body = () => {
               </Link>
             </Accordion>
           </Col>
-          <Col lg={6} className="order-1 order-lg-2">
+          <Col lg={6}>
             <StaticImage
               placeholder="tracedSVG"
               src="../assets/images/radiology.jpg"
