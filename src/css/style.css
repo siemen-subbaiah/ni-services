@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f8f8 !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  color: #000 !important;
+}
+
+/* NAVBAR! */
+nav {
+  background-color: #fff;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  padding-left: 3rem !important;
+  font-size: 1.05rem !important;
+  color: #000000 !important;
+}
+
+.style-links {
+  color: #267cdd !important;
+}
+
+/* HERO! */
+.hero-img {
+  width: 100%;
+  height: 88vh;
+  object-fit: cover;
+}
+
+.hero-img-container {
+  position: relative;
+}
+
+.hero-sub {
+  line-height: 1.6;
+}
+
+.mobile-hero {
+  display: none;
+}
+
+.color {
+  color: #267cdd;
+}
+
+.hero-btn {
+  background-color: #267cdd !important;
+  border-color: #267cdd !important;
+}
+
+.hero-img-container::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.carousel-caption {
+  top: 13rem;
+  bottom: auto;
+}
+
+/* HOME - FAQ */
+.accordion .card .card-header {
+  background-color: #fff !important;
+  cursor: pointer;
+}
+
+.accordion .card {
+  margin: 0.5rem 0;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.info-heading {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-left: 0.4rem;
+}
+
+.accordion .hero-btn {
+  margin-left: 0.3rem;
+}
+
+/* HOME-SERVICES */
+
+.service-h-card {
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.2s ease-in;
+  margin: auto;
+  background-color: #fff;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.service-h-card:hover {
+  transform: scale(1.035);
+}
+
+.service-icon {
+  font-size: 2rem;
+}
+
+.service-btn {
+  background-color: #333982 !important;
+  border-color: #333982 !important;
+}
+
+/* MAPS! */
+iframe {
+  width: 100%;
+}
+
+/* CARAOUSLE */
+.carousel.carousel-slider .control-arrow {
+  background: #000 !important;
+  height: 50px !important;
+  position: absolute;
+  top: 35% !important;
+}
+
+.carousel .control-dots .dot {
+  box-shadow: none !important;
+  background: #454545 !important;
+  outline: 0;
+}
+
+.myCarousel {
+  background: #fff;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1) !important;
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.person-name {
+  margin-bottom: 2rem !important;
+}
+
+/* FORM! */
+.my-form {
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.underline {
+  width: 10rem;
+  height: 0.25rem;
+  background: #000;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  margin: 0.7rem;
+}
+
+/* FOOTER */
+
+.main-footer a,
+.main-footer p {
+  color: #696969 !important;
+}
+
+.heading h5 {
+  padding-left: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.social-links a {
+  color: #267cdd !important;
+  padding-left: 3rem !important;
+  font-size: 1.2rem;
+}
+
+.helper-icons {
+  color: #267cdd;
+}
+
+@media (max-width: 600px) {
+  /* HERO! */
+  .hero-img {
+    width: 100%;
+    height: initial;
+  }
+  .nav-link {
+    padding-left: 0 !important;
+    padding: 1rem !important;
+  }
+  .carousel-caption {
+    display: none;
+  }
+
+  .mobile-hero {
+    margin: 1rem 0;
+    display: block;
+  }
+
+  .main-heading {
+    font-size: 2.7rem;
+  }
+
+  .info-heading {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-left: initial;
+  }
+
+  .accordion .hero-btn {
+    margin-left: initial;
+    width: 100%;
+  }
+
+  .service-h-card {
+    padding: 1.3rem;
+  }
+  .service-card {
+    width: initial !important;
+  }
+  .myCarousel {
+    width: initial;
+  }
+  .carousel.carousel-slider .control-arrow {
+    display: none !important;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .carousel-caption {
+    display: none;
+  }
+  .mobile-hero {
+    margin: 1rem 0;
+    display: block;
+  }
+}
+
+@media (max-width: 350px) {
+  .mail {
+    font-size: 0.8rem;
+  }
+}
