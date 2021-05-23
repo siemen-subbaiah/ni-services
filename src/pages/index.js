@@ -1,5 +1,6 @@
 import React from "react"
 import Body from "../components/Body"
+import ContactHome from "../components/ContactHome"
 import Hero from "../components/Hero"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -14,6 +15,7 @@ const index = () => {
       <Body />
       <ServicesHome />
       <Testimonials />
+      <ContactHome />
     </Layout>
   )
 }

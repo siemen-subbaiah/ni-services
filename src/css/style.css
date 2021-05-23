@@ -87,6 +87,13 @@ nav {
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.info-one-heading {
+  margin-left: 0.4rem;
+  color: #ababab;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
 .info-heading {
   font-size: 1.5rem;
   line-height: 1.5;
@@ -95,6 +102,10 @@ nav {
 
 .accordion .hero-btn {
   margin-left: 0.3rem;
+}
+
+.info-section .card-header h5 {
+  font-size: 1.03rem;
 }
 
 /* HOME-SERVICES */
@@ -114,11 +125,16 @@ nav {
 
 .service-icon {
   font-size: 2rem;
+  color: #267cdd !important;
 }
 
 .service-btn {
   background-color: #333982 !important;
   border-color: #333982 !important;
+}
+
+.servies h3 {
+  margin-top: 5rem;
 }
 
 /* MAPS! */
@@ -127,6 +143,11 @@ iframe {
 }
 
 /* CARAOUSLE */
+
+.testimonials {
+  padding: 0.5rem;
+}
+
 .carousel.carousel-slider .control-arrow {
   background: #000 !important;
   height: 50px !important;
@@ -148,8 +169,42 @@ iframe {
   padding: 1rem;
 }
 
+.star {
+  color: #ffb944;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.loc {
+  font-size: 0.8rem;
+  color: #454545;
+  font-weight: normal;
+}
+
 .person-name {
-  margin-bottom: 2rem !important;
+  margin: 0.5rem 0;
+  font-weight: 650;
+}
+
+/* HOME-CONTACT! */
+.contact-home {
+  background-color: #267cdd;
+  background-image: url(../assets/images/contact-bg.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  height: 65vh;
+}
+
+.contact-home .hero-btn {
+  background-color: #fff !important;
+}
+
+.contact-home h1 {
+  font-size: 4rem;
+}
+
+.my-grid {
+  margin-top: 8.5rem !important;
 }
 
 /* FORM! */
@@ -167,6 +222,7 @@ iframe {
   background: #000;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1rem;
 }
 
 li {
@@ -174,6 +230,10 @@ li {
 }
 
 /* FOOTER */
+
+footer {
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
 
 .main-footer a,
 .main-footer p {
@@ -241,14 +301,19 @@ li {
     display: none !important;
   }
 
+  /* FAQ -HOME*/
   .main-heading {
     font-size: 2.7rem;
   }
 
   .info-heading {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     margin-left: initial;
+  }
+
+  .info-one-heading {
+    margin: 0.7rem 0;
   }
 
   .accordion .hero-btn {
@@ -256,17 +321,42 @@ li {
     width: 100%;
   }
 
+  /* SERVICES-HOME */
   .service-h-card {
     padding: 1.3rem;
   }
   .service-card {
     width: initial !important;
   }
+
+  .servies .hero-btn {
+    font-size: 0.9rem;
+  }
+
   .myCarousel {
     width: initial;
+    margin: 1rem;
   }
   .carousel.carousel-slider .control-arrow {
     display: none !important;
+  }
+
+  /* CONTACT PAGE HOME! */
+
+  .contact-home h1 {
+    font-size: 3rem;
+  }
+
+  .my-grid {
+    margin-top: 5rem !important;
+  }
+
+  /* FOOTER */
+  .heading h5 {
+    padding-left: initial;
+  }
+  .main-footer ul {
+    padding-left: initial;
   }
 }
 
