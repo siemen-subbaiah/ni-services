@@ -9,7 +9,7 @@ const Body = () => {
     <section className="info-section my-5">
       <Container>
         <Row className="justify-content-center align-items-center">
-          <Col lg={6}>
+          <Col lg={6} className="order-2 order-lg-1">
             <h4 className="info-heading text-center text-lg-start">
               Our vision is to provide best quality telemedicine services
               including <span className="color">teleradiology</span> and
@@ -63,7 +63,7 @@ const Body = () => {
               </Link>
             </Accordion>
           </Col>
-          <Col lg={6}>
+          <Col lg={6} className="order-1 order-lg-2">
             <StaticImage
               placeholder="tracedSVG"
               src="../assets/images/radiology.jpg"
