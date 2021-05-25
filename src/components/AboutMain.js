@@ -9,7 +9,7 @@ const AboutMain = () => {
       <Row>
         {data.map(service => {
           return (
-            <Col lg={3} md={2} xl={3} key={service.id} className="my-3">
+            <Col lg={6} md={6} xl={3} key={service.id} className="my-3">
               <div className="service-h-card">
                 {service.image}
                 <h3>{service.title}</h3>

@@ -26,16 +26,21 @@ export const data = [
   },
   {
     id: 6,
+    name: "Covid",
+    to: "/covid",
+  },
+  {
+    id: 7,
     name: "3D PRINTING",
     to: "/3dprinting",
   },
   {
-    id: 7,
+    id: 8,
     name: "Contact",
     to: "/contact",
   },
   {
-    id: 8,
+    id: 9,
     name: "FAQ",
     to: "/faq",
   },

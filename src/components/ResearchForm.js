@@ -1,10 +1,36 @@
-import React from "react"
+import React, { useState } from "react"
 import { Container, Form, Button } from "react-bootstrap"
+import emailjs from "emailjs-com"
+import { navigate } from "gatsby-link"
 
 const ResearchForm = () => {
+  const [loading, setLoading] = useState(false)
+
+  const handleEmail = e => {
+    e.preventDefault()
+    setLoading(true)
+    emailjs
+      .sendForm(
+        "service_x5agap3",
+        "template_5n21wsy",
+        e.target,
+        "user_2ycGHDtiEG2OA8KCMYXOt"
+      )
+      .then(
+        result => {
+          console.log(result.text)
+          setLoading(false)
+          navigate("/thank-you2")
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+    e.target.reset()
+  }
   return (
     <Container>
-      <Form className="my-form mb-5" method="POST">
+      <Form className="my-form mb-5" onSubmit={handleEmail}>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label>Name</Form.Label>
           <Form.Control
@@ -56,7 +82,7 @@ const ResearchForm = () => {
         </Form.Group>
         <div className="d-grid gap-2">
           <Button className="hero-btn my-2" type="submit">
-            Submit
+            {loading ? "Loading..." : "Submit"}
           </Button>
         </div>
       </Form>

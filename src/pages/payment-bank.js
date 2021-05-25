@@ -1,10 +1,35 @@
-import React from "react"
+import React, { useState } from "react"
 import { Col, Container, Form, Row, Button } from "react-bootstrap"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import bankImg from "../assets/images/bank-transfer.png"
+import emailjs from "emailjs-com"
+import { navigate } from "gatsby"
 
-const bankPayment = () => {
+const BankPayment = () => {
+  const [loading, setLoading] = useState(false)
+  const handleEmail = e => {
+    e.preventDefault()
+    setLoading(true)
+    emailjs
+      .sendForm(
+        "service_x5agap3",
+        "template_8upsmbs",
+        e.target,
+        "user_2ycGHDtiEG2OA8KCMYXOt"
+      )
+      .then(
+        result => {
+          console.log(result.text)
+          navigate("/thank-you3")
+          setLoading(false)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+    e.target.reset()
+  }
   return (
     <Layout>
       <Seo Sitetitle="Payment-Bank" />
@@ -37,7 +62,7 @@ const bankPayment = () => {
             </p>
           </Col>
           <Col lg={6} md={12}>
-            <Form className="my-form" method="POST">
+            <Form className="my-form" onSubmit={handleEmail}>
               <Form.Group controlId="exampleForm.ControlInput1">
                 <Form.Label>First Name</Form.Label>
                 <Form.Control
@@ -94,7 +119,7 @@ const bankPayment = () => {
               </Form.Group>
               <div className="d-grid gap-2">
                 <Button className="hero-btn my-2" type="submit">
-                  Submit
+                  {loading ? "Loading..." : "Submit"}
                 </Button>
               </div>
             </Form>
@@ -105,4 +130,4 @@ const bankPayment = () => {
   )
 }
 
-export default bankPayment
+export default BankPayment

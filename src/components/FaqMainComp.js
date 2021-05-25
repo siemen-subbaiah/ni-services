@@ -11,7 +11,7 @@ const FaqMainComp = () => {
         <Row>
           {data.map(item => {
             return (
-              <Col lg={6} md={12}>
+              <Col lg={6} md={12} key={item.id}>
                 <Card>
                   <Accordion.Toggle
                     as={Card.Header}

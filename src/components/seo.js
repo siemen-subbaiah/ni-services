@@ -35,8 +35,12 @@ function Seo({ description, meta, Sitetitle }) {
           content: metaDescription,
         },
         {
-          name: `image`,
-          content: site.siteMetadata.image,
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          property: `og:url`,
+          content: `${site.siteMetadata.siteUrl}`,
         },
         {
           property: `og:title`,
@@ -47,12 +51,16 @@ function Seo({ description, meta, Sitetitle }) {
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          name: `og:image`,
+          content: `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
         },
         {
           name: `twitter:card`,
           content: `summary_large_image`,
+        },
+        {
+          property: `twitter:url`,
+          content: `${site.siteMetadata.siteUrl}`,
         },
         {
           name: `twitter:creator`,

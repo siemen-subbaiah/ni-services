@@ -1,11 +1,37 @@
-import React from "react"
+import React, { useState } from "react"
 import { Col, Container, Form, Row, Button } from "react-bootstrap"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import paytmImg from "../assets/images/paytm.png"
 import qrCode from "../assets/images/qr-code.jpg"
+import emailjs from "emailjs-com"
+import { navigate } from "gatsby"
 
-const paytmPayment = () => {
+const PaytmPayment = () => {
+  const [loading, setLoading] = useState(false)
+  const handleEmail = e => {
+    e.preventDefault()
+    setLoading(true)
+    emailjs
+      .sendForm(
+        "service_x5agap3",
+        "template_8upsmbs",
+        e.target,
+        "user_2ycGHDtiEG2OA8KCMYXOt"
+      )
+      .then(
+        result => {
+          console.log(result.text)
+          navigate("/thank-you3")
+          setLoading(false)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+    e.target.reset()
+  }
+
   return (
     <Layout>
       <Seo Sitetitle="Payment-PayTM" />
@@ -25,7 +51,7 @@ const paytmPayment = () => {
             <img src={qrCode} alt="qr-code" className="qr-img" />
           </Col>
           <Col lg={6} md={12}>
-            <Form className="my-form" method="POST">
+            <Form className="my-form" onSubmit={handleEmail}>
               <Form.Group controlId="exampleForm.ControlInput1">
                 <Form.Label>First Name</Form.Label>
                 <Form.Control
@@ -84,7 +110,7 @@ const paytmPayment = () => {
               </Form.Group>
               <div className="d-grid gap-2">
                 <Button className="hero-btn my-2" type="submit">
-                  Submit
+                  {loading ? "Loading..." : "Submit"}
                 </Button>
               </div>
             </Form>
@@ -95,4 +121,4 @@ const paytmPayment = () => {
   )
 }
 
-export default paytmPayment
+export default PaytmPayment

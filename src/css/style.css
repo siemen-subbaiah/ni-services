@@ -212,7 +212,7 @@ iframe {
   font-weight: normal;
 }
 
-.person-name {
+.person-name1 {
   margin: 0.5rem 0;
   font-weight: 650;
 }
@@ -530,10 +530,6 @@ footer {
 
   .team-card p {
     font-size: 0.85rem;
-  }
-
-  .team-img {
-    text-align: center;
   }
 
   .person-name,

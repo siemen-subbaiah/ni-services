@@ -34,7 +34,7 @@ const Testimonials = () => {
                 <AiFillStar className="star" />
                 <AiFillStar className="star" />
                 <AiFillStar className="star" />
-                <h6 className="person-name">
+                <h6 className="person-name1">
                   ~ {item.person} / <span className="loc">{item.location}</span>
                 </h6>
                 <p>{item.msg}</p>

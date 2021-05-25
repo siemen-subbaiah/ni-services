@@ -22,7 +22,7 @@ const Body = () => {
             <Accordion defaultActiveKey="0" className="my-4">
               {data.map(item => {
                 return (
-                  <Card>
+                  <Card key={item.id}>
                     <Accordion.Toggle
                       as={Card.Header}
                       eventKey={item.id}

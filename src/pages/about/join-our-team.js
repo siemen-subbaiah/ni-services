@@ -1,11 +1,37 @@
-import React from "react"
+import React, { useState } from "react"
 import HeroImg from "../../components/HeroImg"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import img from "../../assets/images/join.svg"
 import { Container, Form, Button } from "react-bootstrap"
+import emailjs from "emailjs-com"
+import { navigate } from "gatsby-link"
 
-const join_our_team = () => {
+const Join_our_team = () => {
+  const [loading, setLoading] = useState(false)
+  const handleEmail = e => {
+    e.preventDefault()
+    setLoading(true)
+    emailjs
+      .sendForm(
+        "service_x5agap3",
+        "template_5n21wsy",
+        e.target,
+        "user_2ycGHDtiEG2OA8KCMYXOt"
+      )
+      .then(
+        result => {
+          console.log(result.text)
+          setLoading(false)
+          navigate("/thank-you2")
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+    e.target.reset()
+  }
+
   return (
     <Layout>
       <Seo Sitetitle="Join our team" />
@@ -18,7 +44,7 @@ const join_our_team = () => {
         />
         <h1 className="j1 text-center">Fill in the form</h1>
         <p className="h5 text-center">We will get back to you very soon</p>
-        <Form className="my-form my-3" id="form-fill">
+        <Form className="my-form my-3" id="form-fill" onSubmit={handleEmail}>
           <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>Name</Form.Label>
             <Form.Control
@@ -70,7 +96,7 @@ const join_our_team = () => {
           </Form.Group>
           <div className="d-grid gap-2">
             <Button className="hero-btn my-2" type="submit">
-              Submit
+              {loading ? "Loading..." : "submit"}
             </Button>
           </div>
         </Form>
@@ -79,4 +105,4 @@ const join_our_team = () => {
   )
 }
 
-export default join_our_team
+export default Join_our_team
