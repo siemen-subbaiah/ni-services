@@ -1,37 +1,37 @@
-import ba from "../assets/images/ba.png"
-import ct from "../assets/images/ct.jpg"
-import inv from "../assets/images/investment.jpg"
-import ptr from "../assets/images/ptr.jpg"
+import React from "react"
+import { FaMicroscope } from "react-icons/fa"
+import { GiMicroscopeLens } from "react-icons/gi"
+import { MdPeopleOutline, MdPayment } from "react-icons/md"
 export const data = [
   {
     id: 1,
-    image: ptr,
-    title: "Personal Tax Returns",
+    image: <FaMicroscope className="service-icon" />,
+    title: "Teleradiology",
     description:
-      "We specialize in almost all categories of Tax Returns and assist our clients worldwide with their tax preparation needs.",
-    link: "/services/personal-tax-returns",
+      "Our services include 24X7 Teleradiology support, locum support and emergency support.",
+    link: "/services/teleradiology",
   },
   {
     id: 2,
-    image: ct,
-    title: "Corporate Taxes",
+    image: <GiMicroscopeLens className="service-icon" />,
+    title: "Telepathology",
     description:
-      "For a typical owner-managed Canadian corporation. Filing of corporate federal T2 Tax returns including the attachments",
-    link: "/services/corporate-taxes",
+      "Telepathology is the electronic transmission of computerized or digital images that can be utilized for diagnostic consultation",
+    link: "/services/telepathology",
   },
   {
     id: 3,
-    image: ba,
-    title: "Bookkeeping & Accounting",
+    image: <MdPeopleOutline className="service-icon" />,
+    title: "Second Opinion",
     description:
-      "We provide a wide range of services for your small business. We expertly handle all of your accounting, bookkeeping and payroll needs.",
-    link: "/services/bookkeeping-and-accounting",
+      "We provide second opinion from our experienced team and interpret your images and provide you detailed reports.",
+    link: "/services/second-opinion",
   },
   {
     id: 4,
-    image: inv,
-    title: "Tax Adjustment",
-    description: `If you receive or found another income slip or deduction receipt simply bring it in to our office and we will file an adjustment for you.`,
-    link: "/services/tax-adjustment",
+    image: <MdPayment className="service-icon" />,
+    title: "Payment Options",
+    description: `Pay for our services online using paytm or bank transfer and leave the hassle of carrying money.`,
+    link: "/services/payment",
   },
 ]

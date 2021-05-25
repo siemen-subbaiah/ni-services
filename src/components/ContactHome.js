@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
 import { Col, Container, Row } from "react-bootstrap"
-import { FaPhoneAlt } from "react-icons/fa"
 
 const ContactHome = () => {
   return (

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +18,36 @@ ul {
 a {
   text-decoration: none !important;
   color: #000 !important;
+}
+
+.background-area {
+  padding-top: 114px;
+  padding-bottom: 114px;
+  background-color: hsl(33deg 33% 95%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-bottom-width: 0px;
+  padding-top: 136px;
+  padding-bottom: 131px;
+  background-size: cover;
+  z-index: 3;
+  position: relative;
+  background-image: url(../assets/images/background.jpg);
+  text-align: center;
+}
+
+.background-area h1 {
+  font-size: 2.7rem;
+  text-transform: uppercase;
+}
+
+.hero-ill {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.hero-ill-p {
+  font-size: 1.1rem;
 }
 
 /* NAVBAR! */
@@ -186,6 +217,22 @@ iframe {
   font-weight: 650;
 }
 
+/* ABOUT! */
+
+.about-main {
+  text-align: center;
+}
+
+.about-main .service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-main h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
 /* HOME-CONTACT! */
 .contact-home {
   background-color: #267cdd;
@@ -204,7 +251,7 @@ iframe {
 }
 
 .my-grid {
-  margin-top: 8.5rem !important;
+  margin-top: 7.5rem !important;
 }
 
 /* FORM! */
@@ -227,6 +274,97 @@ iframe {
 
 li {
   margin: 0.7rem;
+}
+
+/* JOIN OUR TEAM! */
+
+.join-team .my-form,
+.scientific-apply .my-form,
+.deep-apply .my-form {
+  width: 75%;
+  margin: 2rem auto !important;
+}
+
+.j1 {
+  margin-top: 4rem;
+}
+
+/* DIRECTORS */
+
+.directors-card {
+  background: #ffffff;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: auto;
+  width: 60%;
+  text-align: center;
+}
+
+.directors-det {
+  padding: 1rem;
+}
+
+.directors-det h1 {
+  font-size: 1.5rem;
+}
+
+.social-icon-director {
+  color: #267cdd;
+  margin-left: 1rem;
+  font-size: 1.3rem;
+}
+
+/* TEAM! */
+
+.team-card {
+  background-color: #fff;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.team-img {
+  margin-left: 0rem;
+  margin-right: 1.2rem;
+}
+
+.radiology {
+  background-color: yellow;
+  /* width: 10%; */
+  display: inline-block;
+  padding: 0.2rem;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.padiology {
+  background-color: green;
+  /* width: 10%; */
+  display: inline-block;
+  padding: 0.2rem;
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+}
+
+.role {
+  font-size: 0.9rem;
+  color: #696969;
+}
+
+.person-name {
+  position: relative;
+  top: 0.5rem;
+}
+
+/* RESEARCH! */
+
+.requirement ul {
+  list-style-type: initial;
+}
+
+.requirement h4 {
+  font-weight: bold;
 }
 
 /* FOOTER */
@@ -257,6 +395,25 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .hero-ill {
+    margin: 2rem 0;
+  }
+
+  .hero-ill-p {
+    font-size: 1rem;
+  }
+
+  .small-img {
+    height: 90vh;
+  }
+
+  .background-area .w-50 {
+    width: initial !important;
+  }
+  .background-area h1 {
+    font-size: 2.3rem;
+  }
+
   /* HERO! */
   .hero-img {
     height: 90vh;
@@ -349,6 +506,49 @@ footer {
 
   .my-grid {
     margin-top: 5rem !important;
+  }
+
+  /* DIRECTORS! */
+  .directors-card {
+    margin: 1rem;
+    width: initial;
+  }
+
+  /* JOIN! */
+  .join-team .my-form,
+  .scientific-apply .my-form,
+  .deep-apply .my-form {
+    width: initial;
+    margin: 2rem auto !important;
+  }
+
+  /* TEAM! */
+
+  .team-card {
+    margin: 0.45rem 0;
+  }
+
+  .team-card p {
+    font-size: 0.85rem;
+  }
+
+  .team-img {
+    text-align: center;
+  }
+
+  .person-name,
+  .role {
+    text-align: center;
+  }
+
+  .role {
+    position: relative;
+    right: 0.2rem;
+  }
+
+  /* PAYMENT! */
+  .qr-img {
+    width: 100%;
   }
 
   /* FOOTER */

@@ -1,4 +1,5 @@
 import React from "react"
+import BackgroundImage from "../components/BackgroundImage"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -6,9 +7,7 @@ const events = () => {
   return (
     <Layout>
       <Seo Sitetitle="Events" />
-      <div>
-        <h1>Events</h1>
-      </div>
+      <BackgroundImage title="Events" description="" />
     </Layout>
   )
 }
