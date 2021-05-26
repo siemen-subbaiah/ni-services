@@ -280,8 +280,14 @@ li {
 
 .join-team .my-form,
 .scientific-apply .my-form,
+.covid-form .my-form,
 .deep-apply .my-form {
   width: 75%;
+  margin: 2rem auto !important;
+}
+
+.covid-form .my-form {
+  width: 85%;
   margin: 2rem auto !important;
 }
 
@@ -530,6 +536,7 @@ footer {
   /* JOIN! */
   .join-team .my-form,
   .scientific-apply .my-form,
+  .covid-form .my-form,
   .deep-apply .my-form {
     width: initial;
     margin: 2rem auto !important;

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Nischidha Imaging Services`,
-    description: `Our company provides teleradiology services (i.e. CT, MRI, X-ray) to hospitals and diagnostic centres in remote parts of India and other parts of world. It is a health care company that uses technology for providing teleradiology services to consultants and patients.`,
+    description: `Our company provides teleradiology services (i.e. CT, MRI, X-ray) to hospitals and diagnostic centres in remote parts of India and other parts of world.`,
     author: `@Nischidha_ispl`,
     twitterUsername: "@Nischidha_ispl",
     image: "/twitter-img.png",

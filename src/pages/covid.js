@@ -1,5 +1,6 @@
+import { Link } from "gatsby"
 import React from "react"
-import { Container } from "react-bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
 import BackgroundImage from "../components/BackgroundImage"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -68,6 +69,27 @@ const covid = () => {
             hospital or from a clinic if they rapidly deteriorate and the
             patient is at high risk of complications.
           </p>
+
+          <Row className="my-4">
+            <Col lg={6} md={12}>
+              <div className="service-h-card">
+                <h2>Rrequest form</h2>
+                <Link to="/covid-form">
+                  <button className="btn hero-btn text-white">Apply Now</button>
+                </Link>
+              </div>
+            </Col>
+            <Col lg={6} md={12}>
+              <div className="service-h-card">
+                <h2>COVID ICU fund raiser</h2>
+                <Link to="/covid-funds">
+                  <button className="btn hero-btn text-white">
+                    Donate Now
+                  </button>
+                </Link>
+              </div>
+            </Col>
+          </Row>
         </Container>
       </div>
     </Layout>
