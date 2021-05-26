@@ -37,14 +37,14 @@ const FormContact = ({ heading, para }) => {
           <h1>{heading}</h1>
           <p>{para}</p>
           <p>
-            <FaAddressCard className="helper-icons" /> 4086/10, 1st B main, B
+            <FaAddressCard className="helper-icons" /> : 4086/10, 1st B main, B
             Block, 2nd Stage Rajajinagar, Bangalore-560021
           </p>
           <p>
-            <FaPhoneAlt className="helper-icons" /> +91-9844546546
+            <FaPhoneAlt className="helper-icons" /> : +91-9844546546
           </p>
           <p>
-            <FiMail className="helper-icons" />
+            <FiMail className="helper-icons" /> :
             <span className="mail"> nischidhaimagingservices@gmail.com</span>
           </p>
         </Col>

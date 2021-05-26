@@ -87,15 +87,15 @@ const Footer = () => {
                 All Rights Reserved.
               </p>
             </Col>
-            <Col xl={6} md={12} className="text-md-end social-links">
+            <Col xl={6} md={12} className="text-lg-end text-center">
               <a href="https://www.facebook.com/nispl.in/">
-                <SiFacebook />
+                <SiFacebook className="social-links" />
               </a>
               <a href="https://twitter.com/Nischidha_ispl">
-                <SiLinkedin />
+                <SiLinkedin className="social-links" />
               </a>
               <a href="https://www.linkedin.com/company/nischidha-imaging-services-private-limited/">
-                <SiTwitter />
+                <SiTwitter className="social-links" />
               </a>
             </Col>
           </Row>

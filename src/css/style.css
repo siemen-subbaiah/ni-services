@@ -367,6 +367,18 @@ li {
   font-weight: bold;
 }
 
+/* COVID! */
+
+.covid a {
+  color: #267cdd !important;
+}
+
+.sup-apps img {
+  height: 30px;
+  margin-bottom: 1.3rem;
+  margin-right: 1.5rem;
+}
+
 /* FOOTER */
 
 footer {
@@ -384,14 +396,15 @@ footer {
   font-weight: 600;
 }
 
-.social-links a {
+.social-links {
   color: #267cdd !important;
-  padding-left: 3rem !important;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  margin: 0 1.5rem;
 }
 
 .helper-icons {
   color: #267cdd;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 600px) {
@@ -547,6 +560,8 @@ footer {
     width: 100%;
   }
 
+  /* COVID */
+
   /* FOOTER */
   .heading h5 {
     padding-left: initial;
@@ -562,14 +577,26 @@ footer {
   }
 
   .carousel-caption h5 {
-    font-size: 1rem;
-  }
-  .carousel-caption h1 {
     font-size: 1.5rem;
   }
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption {
+    text-align: start !important;
+    top: 30rem;
+    bottom: auto;
+    left: 1rem !important;
+  }
+
   .mobile-hero {
     margin: 1rem 0;
     display: block;
+  }
+
+  .my-grid {
+    margin-top: 14rem !important;
   }
 }
 

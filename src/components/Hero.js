@@ -32,7 +32,7 @@ const Hero = () => {
               className="d-lg-none d-block small-img"
             />
           </div>
-          <Carousel.Caption className="text-lg-start">
+          <Carousel.Caption className="text-start">
             <h1 className="fw-bold">Nischidha Imaging Services</h1>
             <h5 className="my-3 w-50 hero-sub">
               We provide Teleradiology services (i.e. CT, MRI, X-ray) to

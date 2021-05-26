@@ -9,10 +9,10 @@ const covid = () => {
     <Layout>
       <Seo Sitetitle="Covid" />
       <BackgroundImage
-        title="Covid"
-        description="Our company provides teleradiology services (i.e. CT, MRI, X-ray) to hospitals and diagnostic centres in remote parts of India and other parts of world"
+        title="Covid Help"
+        description="Dedicated healthcare facility by providing Intensive Care Unit (ICU) in treatment and management of moderate to severe COVID pneumonia in Bengaluru."
       />
-      <div className="main-info">
+      <div className="main-info covid">
         <Container>
           <p className="my-4">
             Dedicated healthcare facility by providing Intensive Care Unit (ICU)
@@ -35,19 +35,33 @@ const covid = () => {
           </p>
           <p>
             An intensive care unit (ICU), is a special department of a hospital
-            or health care facility that provides intensive care medicine. COVID
-            Intensive care units cater to patients with severe or
-            life-threatening illnesses, which require constant care, close
-            supervision from life support equipment and medication in order to
-            ensure normal bodily functions.
+            or health care facility that provides{" "}
+            <a href="https://en.wikipedia.org/wiki/Intensive_care_medicine">
+              intensive care medicine
+            </a>
+            . COVID Intensive care units cater to patients with 
+            <a href="https://en.wikipedia.org/wiki/Medical_emergency">
+              severe or life-threatening 
+            </a>
+            illnesses, which require constant care, close supervision from life
+            support equipment and medication in order to ensure normal bodily
+            functions.
           </p>
           <p>
-            They are staffed by highly trained physicians, intensivists,
-            nurses and respiratory therapists who specialize in caring for
-            critically ill patients. ICUs are also distinguished from general
-            hospital wards by a higher staff-to-patient ratio and access to
-            advanced medical resources and equipment that is not routinely
-            available elsewhere.
+            They are staffed by highly trained 
+            <a href="https://en.wikipedia.org/wiki/Intensivist">physicians</a>
+            , intensivists,{" "}
+            <a href="https://en.wikipedia.org/wiki/Critical_care_nursing">
+              nurses{" "}
+            </a>
+            and{" "}
+            <a href="https://en.wikipedia.org/wiki/Respiratory_therapists">
+              respiratory therapists
+            </a>{" "}
+            who specialize in caring for critically ill patients. ICUs are also
+            distinguished from general hospital wards by a higher
+            staff-to-patient ratio and access to advanced medical resources and
+            equipment that is not routinely available elsewhere.
           </p>
           <p>
             Patients may be referred directly from an emergency department of
