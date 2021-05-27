@@ -12,7 +12,9 @@ const Body = () => {
       <Container>
         <Row className="justify-content-center align-items-center">
           <Col lg={6}>
-            <h5 className="info-one-heading">OUR VISION</h5>
+            <h5 className="info-one-heading text-center text-lg-start">
+              OUR VISION
+            </h5>
             <h4 className="info-heading">
               is to provide best quality telemedicine services including{" "}
               <span className="color">teleradiology</span> and
