@@ -13,34 +13,44 @@ const payment = () => {
     <Layout>
       <Seo Sitetitle="Payment" />
       <Container>
-        <HeroImg
-          title="Payment Options"
-          description="Pay for our services online using paytm or bank transfer and leave the hassle of carrying money."
-          path={img}
-          id="#payment"
-        />
-        <div className="more-info my-5" id="payment">
-          <Row>
-            <Col lg={6} md={12}>
-              <div className="service-h-card">
-                <img src={paytmImg} alt="paytm-img" />
-                <h3>Paytm</h3>
-                <Link to="/payment-paytm">
-                  <button className="btn text-white hero-btn">Pay Now</button>
-                </Link>
-              </div>
-            </Col>
-            <Col lg={6} md={12}>
-              <div className="service-h-card">
-                <img src={bankImg} alt="bank-img" />
-                <h3>Bank Transfer</h3>
-                <Link to="/payment-bank">
-                  <button className="btn text-white hero-btn">Pay Now</button>
-                </Link>
-              </div>
-            </Col>
-          </Row>
-        </div>
+        <Row>
+          <Col lg={12} className="order-2 order-lg-1">
+            <HeroImg
+              title="Payment Options"
+              description="Pay for our services online using paytm or bank transfer and leave the hassle of carrying money."
+              path={img}
+              id="#payment"
+            />
+          </Col>
+          <Col lg={12} className="order-1 order-lg-2">
+            <div className="more-info my-5 text-center" id="payment">
+              <Row>
+                <Col lg={6} md={12}>
+                  <div className="service-h-card">
+                    <img src={paytmImg} alt="paytm-img" />
+                    <h3>Paytm</h3>
+                    <Link to="/payment-paytm">
+                      <button className="btn text-white hero-btn">
+                        Pay Now
+                      </button>
+                    </Link>
+                  </div>
+                </Col>
+                <Col lg={6} md={12}>
+                  <div className="service-h-card">
+                    <img src={bankImg} alt="bank-img" />
+                    <h3>Bank Transfer</h3>
+                    <Link to="/payment-bank">
+                      <button className="btn text-white hero-btn">
+                        Pay Now
+                      </button>
+                    </Link>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
       </Container>
     </Layout>
   )

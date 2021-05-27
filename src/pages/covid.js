@@ -70,7 +70,7 @@ const covid = () => {
             patient is at high risk of complications.
           </p>
 
-          <Row className="my-4">
+          <Row className="my-4 text-center">
             <Col lg={6} md={12}>
               <div className="service-h-card">
                 <h2>Rrequest form</h2>

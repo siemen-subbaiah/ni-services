@@ -66,14 +66,16 @@ export const data = [
     image: Elroy,
     specialization: `Radiology`,
   },
+
   {
     id: 6,
-    name: `Dr. Mudit Gupta`,
-    role: `Consultant`,
-    description: `Dr. Mudit Gupta is a Radiologist with experience in various modalities spanning ultrasonography, dopplers, computed tomography, Magnetic Resonance Imaging and non vascular interventional procedures.`,
-    education: `MBBS Kasturba Medical College, Manipal, MD Radiodiagnosis Amrita Institute of Medical Sciences, Kochi`,
-    image: Mudit,
-    specialization: `Radiology`,
+    name: `Dr. Ranjana Rajendra`,
+    role: `Director`,
+    description: `Dr. Ranjana Rajendra is a pathologist in Manipal Hospital Bangalore. She has more than 5 years of experience in Hematology and histopathology department. Actively participating in state and national conference for updating latest advances in the field of pathology. She presented scientific papers in CME and conferences.`,
+    education: `MBBS – M S Ramahiah Medical college, Bangalore DCP – J J Medical college, Davangere DNB – Apollo Hospital, Chenna`,
+    expertise: `Histopathology examination and Hematology`,
+    image: RanjanaRajendra,
+    specialization: `Pathology`,
   },
   {
     id: 7,
@@ -115,13 +117,13 @@ export const data = [
   },
   {
     id: 11,
-    name: `Dr. Vinod Patil`,
+    name: `Dr. Akshatha Gorur`,
     role: `Consultant`,
-    description: `Dr. Vinod is radiologist and fetal medicine specialist having experience in radiology, ultrasound, Doppler studies, mammography, CT and MRI. He has presented many scientific presentation in national conferences and also presented several studies and case report publications in international journals.`,
-    education: `MBBS - Kasturba Medical College Mangaluru. MD- Shri B M Patil Medical College Vijayapura`,
-    expertise: `Neuroradiology, musculosketal radiology and fetal imaging`,
-    image: vinod_patil,
-    specialization: `Radiology`,
+    description: `Dr Akshatha is a Pathologist working in Bangalore. She did her MBBS from K.S.Hegde Medical Academy, Mangalore in 2006. She went on to do her MD in Pathology from A.J.Institute of Medical Sciences, Mangalore in 2012 under Rajiv Gandhi University of Medical Sciences.
+
+    During this time she undertook research and was actively involved in training programs.She has worked at Clumax Diagnostics and Kanva Diagnostics as Consultant Pathologist where she was also the Quality manager in the NABL accredited laboratories. She has 10 years experience working as a consultant Pathologist. She has a keen interest in Haematology and Cytopathology. `,
+    image: Akshatha,
+    specialization: `Pathology`,
   },
   {
     id: 12,
@@ -174,22 +176,21 @@ export const data = [
   },
   {
     id: 17,
-    name: `Dr. Ranjana Rajendra`,
-    role: `Director`,
-    description: `Dr. Ranjana Rajendra is a pathologist in Manipal Hospital Bangalore. She has more than 5 years of experience in Hematology and histopathology department. Actively participating in state and national conference for updating latest advances in the field of pathology. She presented scientific papers in CME and conferences.`,
-    education: `MBBS – M S Ramahiah Medical college, Bangalore DCP – J J Medical college, Davangere DNB – Apollo Hospital, Chenna`,
-    expertise: `Histopathology examination and Hematology`,
-    image: RanjanaRajendra,
-    specialization: `Pathology`,
+    name: `Dr. Mudit Gupta`,
+    role: `Consultant`,
+    description: `Dr. Mudit Gupta is a Radiologist with experience in various modalities spanning ultrasonography, dopplers, computed tomography, Magnetic Resonance Imaging and non vascular interventional procedures.`,
+    education: `MBBS Kasturba Medical College, Manipal, MD Radiodiagnosis Amrita Institute of Medical Sciences, Kochi`,
+    image: Mudit,
+    specialization: `Radiology`,
   },
   {
     id: 18,
-    name: `Dr. Akshatha Gorur`,
+    name: `Dr. Vinod Patil`,
     role: `Consultant`,
-    description: `Dr Akshatha is a Pathologist working in Bangalore. She did her MBBS from K.S.Hegde Medical Academy, Mangalore in 2006. She went on to do her MD in Pathology from A.J.Institute of Medical Sciences, Mangalore in 2012 under Rajiv Gandhi University of Medical Sciences.
-
-    During this time she undertook research and was actively involved in training programs.She has worked at Clumax Diagnostics and Kanva Diagnostics as Consultant Pathologist where she was also the Quality manager in the NABL accredited laboratories. She has 10 years experience working as a consultant Pathologist. She has a keen interest in Haematology and Cytopathology. `,
-    image: Akshatha,
-    specialization: `Pathology`,
+    description: `Dr. Vinod is radiologist and fetal medicine specialist having experience in radiology, ultrasound, Doppler studies, mammography, CT and MRI. He has presented many scientific presentation in national conferences and also presented several studies and case report publications in international journals.`,
+    education: `MBBS - Kasturba Medical College Mangaluru. MD- Shri B M Patil Medical College Vijayapura`,
+    expertise: `Neuroradiology, musculosketal radiology and fetal imaging`,
+    image: vinod_patil,
+    specialization: `Radiology`,
   },
 ]

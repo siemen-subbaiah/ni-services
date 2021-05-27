@@ -1,6 +1,7 @@
 import React from "react"
 import Body from "../components/Body"
 import ContactHome from "../components/ContactHome"
+import Gmap from "../components/Gmap"
 import Hero from "../components/Hero"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -16,6 +17,7 @@ const index = () => {
       <ServicesHome />
       <Testimonials />
       <ContactHome />
+      <Gmap />
     </Layout>
   )
 }
