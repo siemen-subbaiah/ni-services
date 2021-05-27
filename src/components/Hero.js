@@ -9,16 +9,13 @@ import slider5 from "../assets/images/slider-5.jpg"
 import mobileSlider1 from "../assets/images/mobile-slider.jpeg"
 import mobileSlider2 from "../assets/images/mobile-slider2.jpeg"
 import mobileSlider3 from "../assets/images/mobile-slider3.jpeg"
+import Lottie from "react-lottie-player"
+import lottieJson from "../assets/mylottie.json"
 
 const Hero = () => {
   return (
     <section className="hero">
-      <Carousel
-        fade
-        prevLabel=""
-        nextLabel=""
-        // className="d-lg-block d-md-block d-none"
-      >
+      <Carousel fade prevLabel="" nextLabel="" className="d-lg-block d-none">
         <Carousel.Item>
           <div className="hero-img-container">
             <img
@@ -132,6 +129,20 @@ const Hero = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+
+      <section className="lottie-hero d-lg-none d-block">
+        <Lottie loop animationData={lottieJson} play />
+        <div className="lottie-details text-center container my-5">
+          <h1>Nischidha Imaging Services</h1>
+          <p className="my-3 hero-sub">
+            We provide Teleradiology services (i.e. CT, MRI, X-ray) to hospitals
+            and diagnostic centres.
+          </p>
+          <Link to="/contact">
+            <button className="btn hero-btn text-white">Contact Us</button>
+          </Link>
+        </div>
+      </section>
     </section>
   )
 }
