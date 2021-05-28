@@ -16,8 +16,8 @@ export const data = [
   },
   {
     id: 4,
-    name: "Events",
-    to: "/events",
+    name: "Covid",
+    to: "/covid",
   },
   {
     id: 5,
@@ -26,21 +26,26 @@ export const data = [
   },
   {
     id: 6,
-    name: "Covid",
-    to: "/covid",
+    name: "Payment",
+    to: "/services/payment",
   },
   {
     id: 7,
+    name: "Events",
+    to: "/events",
+  },
+  {
+    id: 8,
     name: "3D PRINTING",
     to: "/3dprinting",
   },
   {
-    id: 8,
+    id: 9,
     name: "Contact",
     to: "/contact",
   },
   {
-    id: 9,
+    id: 10,
     name: "FAQ",
     to: "/faq",
   },

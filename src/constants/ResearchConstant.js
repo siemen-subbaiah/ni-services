@@ -5,7 +5,7 @@ export const data = [
   {
     id: 1,
     image: <GiArchiveResearch className="service-icon" />,
-    title: "Scientific Research",
+    title: "Scientific Medical Research",
     description: `Medical research encompasses a wide array of research, extending from "basic research" (also called bench science or bench research)`,
     link: "/research/scientific-research",
   },

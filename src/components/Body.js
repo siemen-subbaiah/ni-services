@@ -20,33 +20,23 @@ const Body = () => {
               <span className="color">teleradiology</span> and
               <span className="color"> telepathology</span>
             </h4>
-
-            <Accordion defaultActiveKey="0" className="my-4">
-              {data.map(item => {
-                return (
-                  <Card key={item.id}>
-                    <Accordion.Toggle
-                      as={Card.Header}
-                      eventKey={item.id}
-                      className="d-flex align-items-center justify-content-between"
-                    >
-                      <h5>{item.question}</h5>
-                      <IoMdArrowDropdown />
-                    </Accordion.Toggle>
-                    <Accordion.Collapse eventKey={item.id}>
-                      <Card.Body>
-                        <p>{item.ans}</p>
-                      </Card.Body>
-                    </Accordion.Collapse>
-                  </Card>
-                )
-              })}
-              <Link to="/faq">
-                <button className="btn hero-btn text-white my-2">
-                  More FAQ <RiArrowDropRightLine />
-                </button>
-              </Link>
-            </Accordion>
+            <div className="service-h-card">
+              <p>
+                Dedicated healthcare facility by providing Intensive Care Unit
+                (ICU) in treatment and management of moderate to severe COVID
+                pneumonia in Bengaluru (Rural & Urban). Shall provide 24x7
+                supervised ICU care in collaboration with multiple small
+                hospitals.
+              </p>
+            </div>
+            <Link
+              to="/covid"
+              className="d-flex justify-content-center d-lg-block"
+            >
+              <button className="btn hero-btn text-white my-2 body-btn">
+                Read More <RiArrowDropRightLine />
+              </button>
+            </Link>
           </Col>
           <Col lg={6}>
             <StaticImage

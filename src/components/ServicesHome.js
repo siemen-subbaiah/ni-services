@@ -11,43 +11,43 @@ const ServicesHome = () => {
   return (
     <section className="servies">
       <Container>
-        <h3 className="text-center">Our Services and research</h3>
+        <h3 className="text-center">Our Services</h3>
         <div className="underline"></div>
-        <Row>
+        <Row className="justify-content-center align-items-center">
           <Col lg={4} md={12}>
-            <div className="service-h-card d-flex justify-content-around align-items-center">
-              <GiMicroscopeLens className="service-icon" />
-              <h5>Teleradiology</h5>
+            <div className="service-h-card text-center">
+              <GiMicroscopeLens className="service-icon mb-3" />
+              <h4>Teleradiology</h4>
+              <Link to="/services">
+                <button className="btn btn-outline-info my-2">Read More</button>
+              </Link>
             </div>
           </Col>
           <Col lg={4} md={12}>
-            <div className="service-h-card d-flex justify-content-around align-items-center">
-              <FaMicroscope className="service-icon" />
-              <h5>Telepathology </h5>
+            <div className="service-h-card text-center">
+              <FaMicroscope className="service-icon mb-3" />
+              <h4>Telepathology </h4>
+              <Link to="/services">
+                <button className="btn btn-outline-info my-2">Read More</button>
+              </Link>
             </div>
           </Col>
           <Col lg={4} md={12}>
-            <div className="service-h-card d-flex justify-content-around align-items-center">
-              <FiPrinter className="service-icon" />
-              <h5>3D Printing</h5>
+            <div className="service-h-card text-center">
+              <FiPrinter className="service-icon mb-3" />
+              <h4>3D Printing</h4>
+              <Link to="/services">
+                <button className="btn btn-outline-info my-2">Read More</button>
+              </Link>
             </div>
           </Col>
           <Col lg={4} md={12}>
-            <div className="service-h-card d-flex justify-content-around align-items-center">
-              <AiOutlineThunderbolt className="service-icon" />
-              <h5>Deep Learning</h5>
-            </div>
-          </Col>
-          <Col lg={4} md={12}>
-            <div className="service-h-card d-flex justify-content-around align-items-center">
-              <GiArchiveResearch className="service-icon" />
-              <h5>Scientific Research</h5>
-            </div>
-          </Col>
-          <Col lg={4} md={12}>
-            <div className="service-h-card d-flex justify-content-around align-items-center">
-              <MdPeopleOutline className="service-icon" />
-              <h5>Second opinion</h5>
+            <div className="service-h-card text-center">
+              <MdPeopleOutline className="service-icon mb-3" />
+              <h4>Second opinion</h4>
+              <Link to="/services">
+                <button className="btn btn-outline-info my-2">Read More</button>
+              </Link>
             </div>
           </Col>
         </Row>

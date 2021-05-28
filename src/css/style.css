@@ -50,6 +50,19 @@ a {
   font-size: 1.1rem;
 }
 
+.top-heading img {
+  margin: 0 1rem;
+}
+
+.navbar-toggler {
+  /* position: relative !important;
+  left: 17rem !important; */
+  border: 0 !important;
+  width: 100%;
+  text-align: end;
+  outline: none !important;
+}
+
 /* NAVBAR! */
 nav {
   background-color: #fff;
@@ -96,7 +109,7 @@ nav {
 
 .hero-img-container::before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.78);
+  background-color: rgba(0, 0, 0, 0.7);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -108,10 +121,6 @@ nav {
 }
 
 /* HOME - FAQ */
-.accordion .card .card-header {
-  background-color: #fff !important;
-  cursor: pointer;
-}
 
 .accordion .card {
   margin: 0.5rem 0;
@@ -131,7 +140,7 @@ nav {
   margin-left: 0.4rem;
 }
 
-.accordion .hero-btn {
+.body-btn {
   margin-left: 0.3rem;
 }
 
@@ -147,7 +156,7 @@ nav {
   margin: auto;
   background-color: #fff;
   margin: 1rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .service-h-card:hover {
@@ -155,7 +164,7 @@ nav {
 }
 
 .service-icon {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #267cdd !important;
 }
 
@@ -336,19 +345,17 @@ li {
 
 .radiology {
   background-color: yellow;
-  /* width: 10%; */
   display: inline-block;
-  padding: 0.2rem;
-  border-radius: 3px;
+  padding: 0.3rem;
+  border-radius: 4px;
   text-align: center;
 }
 
 .padiology {
   background-color: green;
-  /* width: 10%; */
   display: inline-block;
-  padding: 0.2rem;
-  border-radius: 3px;
+  padding: 0.3rem;
+  border-radius: 4px;
   text-align: center;
   color: #fff;
 }
@@ -361,6 +368,23 @@ li {
 .person-name {
   position: relative;
   top: 0.5rem;
+}
+
+/* BACK-TO-TOP! */
+
+.bt {
+  position: fixed;
+  right: 2rem;
+  z-index: 1;
+  /* font-size: 1.1rem; */
+}
+
+.bt-i {
+  font-size: 1.2rem;
+}
+
+.bt-ar {
+  background-color: #267cdd;
 }
 
 /* RESEARCH! */
@@ -495,15 +519,8 @@ footer {
     margin: 0.7rem 0;
   }
 
-  .accordion .hero-btn {
-    margin-left: initial;
-    width: 100%;
-  }
-
   /* SERVICES-HOME */
-  .service-h-card {
-    padding: 1.3rem;
-  }
+
   .service-card {
     width: initial !important;
   }

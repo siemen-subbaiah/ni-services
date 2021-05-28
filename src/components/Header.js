@@ -8,13 +8,13 @@ import logo from "../assets/images/logo.png"
 
 const Header = () => {
   return (
-    <Navbar expand="lg" className="justify-content-between">
+    <Navbar expand="lg">
       <Container>
-        <Navbar.Brand>
+        {/* <Navbar.Brand>
           <Link to="/">
             <img src={logo} alt="logo" className="logo" />
           </Link>
-        </Navbar.Brand>
+        </Navbar.Brand> */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse
           id="basic-navbar-nav"

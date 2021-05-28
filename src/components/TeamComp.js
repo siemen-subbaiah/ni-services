@@ -14,7 +14,7 @@ const TeamComp = () => {
       <Row>
         {data.map(item => {
           return (
-            <Col xl={12} key={item.id} data-aos="fade-up">
+            <Col xl={12} key={item.id} data-aos="fade-up" id="team">
               <div className="team-card d-block d-lg-flex justify-content-center align-items-center">
                 <div className="team-img text-center">
                   <img src={item.image} alt={item.name} />

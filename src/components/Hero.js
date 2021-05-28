@@ -31,12 +31,8 @@ const Hero = () => {
           </div>
           <Carousel.Caption className="text-start">
             <h1 className="fw-bold">Nischidha Imaging Services</h1>
-            <h5 className="my-3 w-50 hero-sub">
-              We provide Teleradiology services (i.e. CT, MRI, X-ray) to
-              hospitals and diagnostic centres.
-            </h5>
             <Link to="/contact">
-              <button className="btn hero-btn btn-lg text-white">
+              <button className="btn hero-btn btn-lg text-white my-2">
                 Contact Us
               </button>
             </Link>
@@ -57,12 +53,8 @@ const Hero = () => {
           </div>
           <Carousel.Caption className="text-lg-start">
             <h1 className="fw-bold">Nischidha Imaging Services</h1>
-            <h5 className="my-3 w-50 hero-sub">
-              We provide Teleradiology services (i.e. CT, MRI, X-ray) to
-              hospitals and diagnostic centres.
-            </h5>
             <Link to="/contact">
-              <button className="btn hero-btn btn-lg text-white">
+              <button className="btn hero-btn btn-lg text-white my-2">
                 Contact Us
               </button>
             </Link>
@@ -83,12 +75,8 @@ const Hero = () => {
           </div>
           <Carousel.Caption className="text-lg-start">
             <h1 className="fw-bold">Nischidha Imaging Services</h1>
-            <h5 className="my-3 w-50 hero-sub">
-              We provide Teleradiology services (i.e. CT, MRI, X-ray) to
-              hospitals and diagnostic centres.
-            </h5>
             <Link to="/contact">
-              <button className="btn hero-btn btn-lg text-white">
+              <button className="btn hero-btn btn-lg text-white my-2">
                 Contact Us
               </button>
             </Link>
@@ -100,12 +88,8 @@ const Hero = () => {
           </div>
           <Carousel.Caption className="text-lg-start">
             <h1 className="fw-bold">Nischidha Imaging Services</h1>
-            <h5 className="my-3 w-50 hero-sub">
-              We provide Teleradiology services (i.e. CT, MRI, X-ray) to
-              hospitals and diagnostic centres.
-            </h5>
             <Link to="/contact">
-              <button className="btn hero-btn btn-lg text-white">
+              <button className="btn hero-btn btn-lg text-white my-2">
                 Contact Us
               </button>
             </Link>
@@ -117,12 +101,8 @@ const Hero = () => {
           </div>
           <Carousel.Caption className="text-lg-start">
             <h1 className="fw-bold">Nischidha Imaging Services</h1>
-            <h5 className="my-3 w-50 hero-sub">
-              We provide Teleradiology services (i.e. CT, MRI, X-ray) to
-              hospitals and diagnostic centres.
-            </h5>
             <Link to="/contact">
-              <button className="btn hero-btn btn-lg text-white">
+              <button className="btn hero-btn btn-lg text-white my-2">
                 Contact Us
               </button>
             </Link>

@@ -37,7 +37,11 @@ export const data = [
   {
     id: 8,
     question: `How do I get started?`,
-    ans: `wait`,
+    ans: `Get in touch with us – We will answer your questions, get to know your needs and develop a proposal for you
+          Once we have agreed, discussion with our IT team to evaluate your current technology and what will be needed for teleradiology
+          Our IT team will remotely connect your centre to our dedicated server and we our team can start reporting for you. Usually it takes less than 3-4 days to get started.
+          Remote training for your technical staff
+          Continued training for staff when needed`,
   },
   {
     id: 9,

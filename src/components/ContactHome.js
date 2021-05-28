@@ -11,7 +11,7 @@ const ContactHome = () => {
             <h1>Reach out now</h1>
             <h3>to avail our services</h3>
             <Link to="/contact">
-              <button className="btn hero-btn btn-lg">Contact us</button>
+              <button className="btn hero-btn btn-lg my-2">Contact us</button>
             </Link>
           </Col>
         </Row>
