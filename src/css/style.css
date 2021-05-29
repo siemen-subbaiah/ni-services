@@ -54,16 +54,12 @@ a {
   margin: 0 1rem;
 }
 
-.nav-b img {
-  margin-right: 1rem;
-}
-
-/* .navbar-toggler {
+.navbar-toggler {
   border: 0 !important;
   width: 100%;
   text-align: end;
   outline: none !important;
-} */
+}
 
 /* NAVBAR! */
 nav {
@@ -443,6 +439,10 @@ footer {
   /* .lottie-details {
     border-bottom: 1px solid #000;
   } */
+
+  .top-heading h3 {
+    font-size: 1rem;
+  }
   .hero-ill {
     margin: 2rem 0;
   }
@@ -632,5 +632,8 @@ footer {
 @media (max-width: 350px) {
   .mail {
     font-size: 0.8rem;
+  }
+  .top-heading h3 {
+    font-size: 0.9rem;
   }
 }
