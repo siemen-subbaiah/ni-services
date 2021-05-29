@@ -1,34 +1,35 @@
-import React, { useState } from "react"
+import React from "react"
 import { Button, Col, Container, Form, Row } from "react-bootstrap"
 import { FaAddressCard, FaPhoneAlt } from "react-icons/fa"
 import { FiMail } from "react-icons/fi"
-import emailjs from "emailjs-com"
-import { navigate } from "gatsby"
+// import emailjs from "emailjs-com"
+// import { navigate } from "gatsby"
+const FORMSPARK_ACTION_URL = "https://submit-form.com/FjhXcw2p"
 
 const FormContact = ({ heading, para }) => {
-  const [loading, setLoading] = useState(false)
-  const handleEmail = e => {
-    e.preventDefault()
-    setLoading(true)
-    emailjs
-      .sendForm(
-        "service_x5agap3",
-        "template_8upsmbs",
-        e.target,
-        "user_2ycGHDtiEG2OA8KCMYXOt"
-      )
-      .then(
-        result => {
-          console.log(result.text)
-          navigate("/thank-you1")
-          setLoading(false)
-        },
-        error => {
-          console.log(error.text)
-        }
-      )
-    e.target.reset()
-  }
+  // const [loading, setLoading] = useState(false)
+  // const handleEmail = e => {
+  //   e.preventDefault()
+  //   setLoading(true)
+  //   emailjs
+  //     .sendForm(
+  //       "service_x5agap3",
+  //       "template_8upsmbs",
+  //       e.target,
+  //       "user_2ycGHDtiEG2OA8KCMYXOt"
+  //     )
+  //     .then(
+  //       result => {
+  //         console.log(result.text)
+  //         navigate("/thank-you1")
+  //         setLoading(false)
+  //       },
+  //       error => {
+  //         console.log(error.text)
+  //       }
+  //     )
+  //   e.target.reset()
+  // }
 
   return (
     <Container className="my-5">
@@ -49,7 +50,18 @@ const FormContact = ({ heading, para }) => {
           </p>
         </Col>
         <Col md={12} lg={6}>
-          <Form className="my-form" onSubmit={handleEmail}>
+          <Form className="my-form" method="POST" action={FORMSPARK_ACTION_URL}>
+            <input
+              type="hidden"
+              name="_redirect"
+              value="https://epic-meninsky-607a02.netlify.app/thank-you1"
+            />
+            <input
+              type="hidden"
+              name="_email.template.title"
+              value="Contact Form"
+            />
+            <input type="hidden" name="_email.template.footer" value="false" />
             <Form.Group controlId="exampleForm.ControlInput1">
               <Form.Label>Name</Form.Label>
               <Form.Control
@@ -74,7 +86,7 @@ const FormContact = ({ heading, para }) => {
             </Form.Group>
             <div className="d-grid gap-2">
               <Button className="hero-btn my-2" type="submit">
-                {loading ? "Loading..." : "submit"}
+                submit
               </Button>
             </div>
           </Form>

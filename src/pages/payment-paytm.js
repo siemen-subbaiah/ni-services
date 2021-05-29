@@ -1,36 +1,37 @@
-import React, { useState } from "react"
+import React from "react"
 import { Col, Container, Form, Row, Button } from "react-bootstrap"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import paytmImg from "../assets/images/paytm.png"
 import qrCode from "../assets/images/qr-code.jpg"
-import emailjs from "emailjs-com"
-import { navigate } from "gatsby"
+// import emailjs from "emailjs-com"
+// import { navigate } from "gatsby"
+const FORMSPARK_ACTION_URL = "https://submit-form.com/8kWAnAIc"
 
 const PaytmPayment = () => {
-  const [loading, setLoading] = useState(false)
-  const handleEmail = e => {
-    e.preventDefault()
-    setLoading(true)
-    emailjs
-      .sendForm(
-        "service_x5agap3",
-        "template_8upsmbs",
-        e.target,
-        "user_2ycGHDtiEG2OA8KCMYXOt"
-      )
-      .then(
-        result => {
-          console.log(result.text)
-          navigate("/thank-you3")
-          setLoading(false)
-        },
-        error => {
-          console.log(error.text)
-        }
-      )
-    e.target.reset()
-  }
+  // const [loading, setLoading] = useState(false)
+  // const handleEmail = e => {
+  //   e.preventDefault()
+  //   setLoading(true)
+  //   emailjs
+  //     .sendForm(
+  //       "service_x5agap3",
+  //       "template_8upsmbs",
+  //       e.target,
+  //       "user_2ycGHDtiEG2OA8KCMYXOt"
+  //     )
+  //     .then(
+  //       result => {
+  //         console.log(result.text)
+  //         navigate("/thank-you3")
+  //         setLoading(false)
+  //       },
+  //       error => {
+  //         console.log(error.text)
+  //       }
+  //     )
+  //   e.target.reset()
+  // }
 
   return (
     <Layout>
@@ -51,7 +52,26 @@ const PaytmPayment = () => {
             <img src={qrCode} alt="qr-code" className="qr-img" />
           </Col>
           <Col lg={6} md={12}>
-            <Form className="my-form" onSubmit={handleEmail}>
+            <Form
+              className="my-form"
+              method="POST"
+              action={FORMSPARK_ACTION_URL}
+            >
+              <input
+                type="hidden"
+                name="_redirect"
+                value="https://epic-meninsky-607a02.netlify.app/thank-you3"
+              />
+              <input
+                type="hidden"
+                name="_email.template.title"
+                value="Bank Transfer"
+              />
+              <input
+                type="hidden"
+                name="_email.template.footer"
+                value="false"
+              />
               <Form.Group controlId="exampleForm.ControlInput1">
                 <Form.Label>First Name</Form.Label>
                 <Form.Control
@@ -85,7 +105,7 @@ const PaytmPayment = () => {
                   type="number"
                   placeholder="Enter your mobile number"
                   required
-                  name="number"
+                  name="contact number"
                 />
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlInput1">
@@ -94,7 +114,7 @@ const PaytmPayment = () => {
                   type="text"
                   placeholder="Mention the service availed"
                   required
-                  name="service"
+                  name="service availed"
                 />
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlInput1">
@@ -110,7 +130,7 @@ const PaytmPayment = () => {
               </Form.Group>
               <div className="d-grid gap-2">
                 <Button className="hero-btn my-2" type="submit">
-                  {loading ? "Loading..." : "Submit"}
+                  Submit
                 </Button>
               </div>
             </Form>

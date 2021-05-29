@@ -1,10 +1,8 @@
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
-import { Accordion, Card, Col, Container, Row } from "react-bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
 import { RiArrowDropRightLine } from "react-icons/ri"
-import { IoMdArrowDropdown } from "react-icons/io"
-import { data } from "../constants/FaqHome"
 
 const Body = () => {
   return (

@@ -1,36 +1,37 @@
-import React, { useState } from "react"
+import React from "react"
 import HeroImg from "../../components/HeroImg"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import img from "../../assets/images/join.svg"
 import { Container, Form, Button } from "react-bootstrap"
-import emailjs from "emailjs-com"
-import { navigate } from "gatsby-link"
+// import emailjs from "emailjs-com"
+// import { navigate } from "gatsby-link"
+const FORMSPARK_ACTION_URL = "https://submit-form.com/3JOdyWbJ"
 
 const Join_our_team = () => {
-  const [loading, setLoading] = useState(false)
-  const handleEmail = e => {
-    e.preventDefault()
-    setLoading(true)
-    emailjs
-      .sendForm(
-        "service_x5agap3",
-        "template_5n21wsy",
-        e.target,
-        "user_2ycGHDtiEG2OA8KCMYXOt"
-      )
-      .then(
-        result => {
-          console.log(result.text)
-          setLoading(false)
-          navigate("/thank-you2")
-        },
-        error => {
-          console.log(error.text)
-        }
-      )
-    e.target.reset()
-  }
+  // const [loading, setLoading] = useState(false)
+  // const handleEmail = e => {
+  //   e.preventDefault()
+  //   setLoading(true)
+  //   emailjs
+  //     .sendForm(
+  //       "service_x5agap3",
+  //       "template_5n21wsy",
+  //       e.target,
+  //       "user_2ycGHDtiEG2OA8KCMYXOt"
+  //     )
+  //     .then(
+  //       result => {
+  //         console.log(result.text)
+  //         setLoading(false)
+  //         navigate("/thank-you2")
+  //       },
+  //       error => {
+  //         console.log(error.text)
+  //       }
+  //     )
+  //   e.target.reset()
+  // }
 
   return (
     <Layout>
@@ -44,7 +45,23 @@ const Join_our_team = () => {
         />
         <h1 className="j1 text-center">Fill in the form</h1>
         <p className="h5 text-center">We will get back to you very soon</p>
-        <Form className="my-form my-3" id="form-fill" onSubmit={handleEmail}>
+        <Form
+          className="my-form my-3"
+          id="form-fill"
+          method="POST"
+          action={FORMSPARK_ACTION_URL}
+        >
+          <input
+            type="hidden"
+            name="_redirect"
+            value="https://epic-meninsky-607a02.netlify.app/thank-you2"
+          />
+          <input
+            type="hidden"
+            name="_email.template.title"
+            value="Join Team Form"
+          />
+          <input type="hidden" name="_email.template.footer" value="false" />
           <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>Name</Form.Label>
             <Form.Control
@@ -78,7 +95,7 @@ const Join_our_team = () => {
               type="number"
               placeholder="Enter your Contact number"
               required
-              name="contact"
+              name="contact-number"
             />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlInput1">
@@ -96,7 +113,7 @@ const Join_our_team = () => {
           </Form.Group>
           <div className="d-grid gap-2">
             <Button className="hero-btn my-2" type="submit">
-              {loading ? "Loading..." : "submit"}
+              submit
             </Button>
           </div>
         </Form>
