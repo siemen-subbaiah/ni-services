@@ -146,8 +146,9 @@ nav {
   margin-left: 0.3rem;
 }
 
-.info-section .card-header h5 {
-  font-size: 1.03rem;
+.card-header {
+  background-color: #fff !important;
+  cursor: pointer;
 }
 
 /* HOME-SERVICES */

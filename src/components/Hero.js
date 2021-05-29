@@ -11,6 +11,7 @@ import mobileSlider2 from "../assets/images/mobile-slider2.jpeg"
 import mobileSlider3 from "../assets/images/mobile-slider3.jpeg"
 import Lottie from "react-lottie-player"
 import lottieJson from "../assets/mylottie.json"
+import lottieFile from "../assets/animation.gif"
 
 const Hero = () => {
   return (
@@ -111,7 +112,8 @@ const Hero = () => {
       </Carousel>
 
       <section className="lottie-hero d-lg-none d-block">
-        <Lottie loop animationData={lottieJson} play />
+        {/* <Lottie loop animationData={lottieJson} play /> */}
+        <img src={lottieFile} alt="" className="img-fluid" />
         <div className="lottie-details text-center container my-5">
           <h1>Nischidha Imaging Services</h1>
           <Link to="/contact">
