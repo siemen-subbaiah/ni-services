@@ -13,7 +13,7 @@ const covid = () => {
           <Row className="my-4 text-center">
             <Col lg={6} md={12}>
               <div className="service-h-card">
-                <h2>Rrequest form</h2>
+                <h2>Request form</h2>
                 <Link to="/covid-form">
                   <button className="btn hero-btn text-white">Apply Now</button>
                 </Link>
@@ -23,7 +23,7 @@ const covid = () => {
               <div className="service-h-card">
                 <h2>COVID ICU fund raiser</h2>
                 <Link to="/covid-funds">
-                  <button className="btn hero-btn text-white">
+                  <button className="btn btn-success text-white">
                     Donate Now
                   </button>
                 </Link>

@@ -61,6 +61,10 @@ a {
   outline: none !important;
 }
 
+.btns .btn {
+  margin-right: 1rem;
+}
+
 /* NAVBAR! */
 nav {
   background-color: #fff;
@@ -133,7 +137,7 @@ nav {
 }
 
 .info-heading {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   margin-left: 0.4rem;
 }
@@ -436,10 +440,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-  /* .lottie-details {
-    border-bottom: 1px solid #000;
-  } */
-
   .top-heading h3 {
     font-size: 1rem;
   }
@@ -512,9 +512,9 @@ footer {
   }
 
   .info-heading {
-    font-size: 1.1rem;
-    line-height: 1.5;
+    font-size: 1rem;
     margin-left: initial;
+    text-align: center;
   }
 
   .info-one-heading {

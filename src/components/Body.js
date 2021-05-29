@@ -12,36 +12,53 @@ const Body = () => {
       <Container>
         <Row className="justify-content-center align-items-center">
           <Col lg={6}>
-            <h5 className="info-one-heading text-center text-lg-start">
-              OUR VISION
-            </h5>
-            <h4 className="info-heading">
-              is to provide best quality telemedicine services including{" "}
-              <span className="color">teleradiology</span> and
-              <span className="color"> telepathology</span>
-            </h4>
-            <div className="service-h-card">
-              <p>
-                Dedicated healthcare facility by providing Intensive Care Unit
-                (ICU) in treatment and management of moderate to severe COVID
-                pneumonia in Bengaluru (Rural & Urban). Shall provide 24x7
-                supervised ICU care in collaboration with multiple small
-                hospitals.
-              </p>
+            <div className="my-5">
+              <h5 className="info-one-heading text-center text-lg-start">
+                OUR VISION
+              </h5>
+              <h4 className="info-heading">
+                is to provide best quality telemedicine services including{" "}
+                <span className="color">teleradiology</span> and
+                <span className="color"> telepathology</span>
+              </h4>
             </div>
-            <Link
-              to="/covid"
-              className="d-flex justify-content-center d-lg-block"
-            >
-              <button className="btn hero-btn text-white my-2 body-btn">
-                Read More <RiArrowDropRightLine />
-              </button>
-            </Link>
+            <h5 className="info-one-heading text-center text-lg-start">
+              COVID HELP
+            </h5>
+            <p className="info-heading">
+              Dedicated healthcare facility by providing Intensive Care Unit
+              <span className="color">(ICU)</span> in treatment and management
+              of moderate to severe COVID pneumonia in Bengaluru (Rural & Urban)
+              {
+                <Link to="/covid">
+                  {" "}
+                  <span className="color">read more...</span>
+                </Link>
+              }
+            </p>
+            <div className="btns d-flex align-items-center justify-content-center justify-content-lg-start my-3">
+              <Link
+                to="/covid-form"
+                className="d-flex justify-content-center d-lg-block"
+              >
+                <button className="btn hero-btn text-white my-2 body-btn">
+                  Apply Now <RiArrowDropRightLine />
+                </button>
+              </Link>
+              <Link
+                to="/covid-funds"
+                className="d-flex justify-content-center d-lg-block"
+              >
+                <button className="btn btn-success text-white my-2 body-btn">
+                  Donate Now <RiArrowDropRightLine />
+                </button>
+              </Link>
+            </div>
           </Col>
-          <Col lg={6}>
+          <Col lg={6} className="mt-5 mt-lg-0">
             <StaticImage
               placeholder="tracedSVG"
-              src="../assets/images/target.svg"
+              src="../assets/images/covid.svg"
               layout="constrained"
               alt="finance-img"
             />

@@ -114,10 +114,6 @@ const Hero = () => {
         <Lottie loop animationData={lottieJson} play />
         <div className="lottie-details text-center container my-5">
           <h1>Nischidha Imaging Services</h1>
-          <p className="my-3 hero-sub">
-            We provide Teleradiology services (i.e. CT, MRI, X-ray) to hospitals
-            and diagnostic centres.
-          </p>
           <Link to="/contact">
             <button className="btn hero-btn text-white">Contact Us</button>
           </Link>
