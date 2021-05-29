@@ -68,7 +68,6 @@ const CovidForm = () => {
                   name="sex"
                   id="formHorizontalRadios1"
                   inline
-                  checked
                   required
                 />
                 <Form.Check

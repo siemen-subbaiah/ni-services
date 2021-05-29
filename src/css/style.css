@@ -411,6 +411,11 @@ li {
   margin-right: 1.5rem;
 }
 
+.covid-help .my-form {
+  width: 77%;
+  margin: 2rem auto !important;
+}
+
 /* FOOTER */
 
 footer {
@@ -590,6 +595,10 @@ footer {
   }
 
   /* COVID */
+
+  .covid-help .my-form {
+    width: initial;
+  }
 
   /* FOOTER */
   .heading h5 {

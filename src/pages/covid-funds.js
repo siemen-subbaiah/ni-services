@@ -1,11 +1,12 @@
 import React from "react"
-import { Container, Col, Row } from "react-bootstrap"
+import { Container, Col, Row, Form, Button } from "react-bootstrap"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import qrCode from "../assets/images/qr-code.jpg"
 import gpay from "../assets/images/g-pay.png"
 import paytm from "../assets/images/paytmupi.png"
 import phonepay from "../assets/images/phonepay.png"
+const FORMSPARK_ACTION_URL = "https://submit-form.com/5ludYxuU"
 
 const covidFunds = () => {
   return (
@@ -64,6 +65,71 @@ const covidFunds = () => {
             </div>
           </Col>
         </Row>
+        <Form className="my-form" method="POST" action={FORMSPARK_ACTION_URL}>
+          <input
+            type="hidden"
+            name="_redirect"
+            value="https://epic-meninsky-607a02.netlify.app/thank-you3"
+          />
+          <input
+            type="hidden"
+            name="_email.template.title"
+            value="Bank Transfer"
+          />
+          <input type="hidden" name="_email.template.footer" value="false" />
+          <Form.Group controlId="exampleForm.ControlInput1">
+            <Form.Label>First Name</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter your first name"
+              required
+              name="first-name"
+            />
+          </Form.Group>
+          <Form.Group controlId="exampleForm.ControlInput1">
+            <Form.Label>Last Name</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter your last name"
+              required
+              name="last-name"
+            />
+          </Form.Group>
+          <Form.Group controlId="exampleForm.ControlInput1">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Enter your email address"
+              required
+              name="email"
+            />
+          </Form.Group>
+          <Form.Group controlId="exampleForm.ControlInput1">
+            <Form.Label>Mobile no</Form.Label>
+            <Form.Control
+              type="number"
+              placeholder="Enter your mobile number"
+              required
+              name="contact number"
+            />
+          </Form.Group>
+          <Form.Group controlId="exampleForm.ControlInput1">
+            <Form.Label>Amount</Form.Label>
+            <Form.Control type="number" required name="amount" />
+          </Form.Group>
+          <Form.Group controlId="exampleForm.ControlInput1">
+            <p>
+              After successful payment, please enter the transaction number:
+            </p>
+            <Form.Label>Transaction Number</Form.Label>
+            <Form.Control type="number" required name="transaction-id" />
+          </Form.Group>
+          <div className="d-grid gap-2">
+            <Button className="hero-btn my-2" type="submit">
+              Submit
+            </Button>
+          </div>
+        </Form>
       </Container>
     </Layout>
   )
