@@ -54,14 +54,16 @@ a {
   margin: 0 1rem;
 }
 
-.navbar-toggler {
-  /* position: relative !important;
-  left: 17rem !important; */
+.nav-b img {
+  margin-right: 1rem;
+}
+
+/* .navbar-toggler {
   border: 0 !important;
   width: 100%;
   text-align: end;
   outline: none !important;
-}
+} */
 
 /* NAVBAR! */
 nav {

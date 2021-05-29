@@ -10,11 +10,12 @@ const Header = () => {
   return (
     <Navbar expand="lg">
       <Container>
-        {/* <Navbar.Brand>
+        <Navbar.Brand className="d-block d-lg-none nav-b">
           <Link to="/">
             <img src={logo} alt="logo" className="logo" />
+            Nischidha Imaging Services
           </Link>
-        </Navbar.Brand> */}
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse
           id="basic-navbar-nav"
