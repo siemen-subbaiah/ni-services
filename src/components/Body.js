@@ -9,19 +9,25 @@ const Body = () => {
     <section className="info-section my-3 my-lg-5">
       <Container>
         <Row className="justify-content-center align-items-center">
+          <div className="my-5">
+            <h1 className="info-one-heading h5 fw-bold text-center">
+              OUR VISION
+            </h1>
+            <p className="info-heading">
+              Our company provides teleradiology services (i.e. CT, MRI, X-ray)
+              to hospitals and diagnostic centres in remote parts of India and
+              other parts of world. It is a health care company that uses
+              technology for providing teleradiology services to consultants and
+              patients. The reports generated are of international standard by
+              qualified (as per MCI guidelines), skilled, devoted and hard
+              working consultants in Radiodiagnosis. Second opinion can be
+              obtained and also offering the weekends support, flexible
+              scheduling and excellent reporting quality.
+            </p>
+          </div>
           <Col lg={6}>
-            <div className="my-5">
-              <h1 className="info-one-heading h5 fw-bold text-center text-lg-start">
-                OUR VISION
-              </h1>
-              <p className="info-heading">
-                is to provide best quality telemedicine services including{" "}
-                <span className="color">teleradiology</span> and
-                <span className="color"> telepathology</span>
-              </p>
-            </div>
             <h1 className="info-one-heading fw-bold h5 text-center text-lg-start">
-              COVID HELP
+              COVID SERVICES
             </h1>
             <p className="info-heading">
               Dedicated healthcare facility by providing Intensive Care Unit
@@ -40,7 +46,7 @@ const Body = () => {
                 className="d-flex justify-content-center d-lg-block"
               >
                 <button className="btn hero-btn text-white my-2 body-btn">
-                  Apply Now <RiArrowDropRightLine />
+                  Request Form <RiArrowDropRightLine />
                 </button>
               </Link>
               <Link

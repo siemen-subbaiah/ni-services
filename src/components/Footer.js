@@ -100,13 +100,13 @@ const Footer = () => {
               >
                 <SiFacebook className="social-links" />
               </a>
-              <a href="https://twitter.com/Nischidha_ispl" aria-label="twitter">
-                <SiLinkedin className="social-links" />
-              </a>
               <a
                 href="https://www.linkedin.com/company/nischidha-imaging-services-private-limited/"
                 aria-label="linkedin"
               >
+                <SiLinkedin className="social-links" />
+              </a>
+              <a href="https://twitter.com/Nischidha_ispl" aria-label="twitter">
                 <SiTwitter className="social-links" />
               </a>
             </Col>

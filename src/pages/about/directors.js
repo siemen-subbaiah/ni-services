@@ -12,12 +12,9 @@ const directors = () => {
     <Layout>
       <Seo Sitetitle="Board of Directors" />
       <Container className="directors">
-        <HeroImg
-          title="Board of Directors"
-          description="Meet the board of directors who are taking the services to more further heights."
-          path={img}
-          id="#directors"
-        />
+        <h1 className="text-center mt-5">Board of Directors</h1>
+        <div className="underline"></div>
+
         <div className="directors-info my-5" id="directors">
           <Row>
             <Col lg={6} md={12}>
@@ -43,6 +40,16 @@ const directors = () => {
                       <SiTwitter className="social-icon-director" />
                     </a>
                   </div>
+                  <p className="my-3">
+                    Our Vision towards future teleradiology services in India
+                    and abroad that led to the inception of Nischidha Imaging
+                    services private limited. We realized the need of radiology
+                    services in remote areas where in crucial times also the
+                    reports could not be produced because of the lack of
+                    professional help. As a team we work towards establishing
+                    high quality organization and deliver the services in
+                    healthcare sector.
+                  </p>
                 </div>
               </div>
             </Col>
@@ -66,6 +73,11 @@ const directors = () => {
                       <SiLinkedin className="social-icon-director" />
                     </a>
                   </div>
+                  <p className="my-3">
+                    Supported whole heartedly for incorporation of company.
+                    Worked hard to make this company a reality. Adding the
+                    services of telepathology to remote areas.
+                  </p>
                 </div>
               </div>
             </Col>

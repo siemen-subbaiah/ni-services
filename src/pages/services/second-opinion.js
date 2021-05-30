@@ -11,12 +11,8 @@ const secondOpinion = () => {
     <Layout>
       <Seo Sitetitle="Second-Opinion" />
       <Container>
-        <HeroImg
-          title="Second Opinion"
-          description="We provide second opinion from our experienced team and interpret your images and provide you detailed reports."
-          path={img}
-          id="#secondopinion"
-        />
+        <h1 className="text-center mt-5">Second Opinion</h1>
+        <div className="underline"></div>
         <div className="more-info my-5" id="secondopinion">
           <Row className="justify-content-center align-items-center">
             <Col lg={6} md={12} className="order-2 order-lg-1">

@@ -10,12 +10,6 @@ const mission = () => {
     <Layout>
       <Seo Sitetitle="Mission" />
       <Container>
-        <HeroImg
-          title="Our Mission"
-          description="Our vision is to provide best quality telemedicine services including teleradiology and telepathology"
-          path={img}
-          id="#mission"
-        />
         <h1 className="mt-5 text-center">WHO WE ARE</h1>
         <div className="underline"></div>
         <p className="my-5">

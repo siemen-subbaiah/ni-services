@@ -37,12 +37,8 @@ const Join_our_team = () => {
     <Layout>
       <Seo Sitetitle="Join our team" />
       <Container className="join-team">
-        <HeroImg
-          title="Join Our Team"
-          description="We’re always on the lookout for awesome people to join us in help building a better future."
-          path={img}
-          id="#form-fill"
-        />
+        <h1 className="text-center mt-5">Join Our Team</h1>
+        <div className="underline"></div>
         <h1 className="j1 text-center">Fill in the form</h1>
         <p className="h5 text-center">We will get back to you very soon</p>
         <Form

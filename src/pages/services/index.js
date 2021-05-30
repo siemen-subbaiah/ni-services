@@ -8,10 +8,7 @@ const services = () => {
   return (
     <Layout>
       <Seo Sitetitle="Services" />
-      <BackgroundImage
-        title="Services"
-        description="Our services include 24X7 Teleradiology support,Telepathology support, locum support and emergency support."
-      />
+      <BackgroundImage title="Services" description="" />
       <ServicesMain />
     </Layout>
   )

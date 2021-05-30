@@ -9,10 +9,7 @@ const contact = () => {
   return (
     <Layout>
       <Seo Sitetitle="Contact" />
-      <BackgroundImage
-        title="Contact us"
-        description="Our services include 24X7 Teleradiology support,Telepathology support, locum support and emergency support."
-      />
+      <BackgroundImage title="Contact us" description="" />
       <FormContact
         heading="Please get in touch"
         para="Interested in our services? Get in touch with us via the form below and we'll get back to you as soon as possible!"

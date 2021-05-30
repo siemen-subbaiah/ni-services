@@ -27,12 +27,8 @@ const Team = () => {
     <Layout>
       <Seo Sitetitle="Our Team" />
       <Container>
-        <HeroImg
-          title="Our Team"
-          description="Take a look at our team members who are the heart and soul of our company."
-          path={img}
-          id="#team"
-        />
+        <h1 className="text-center mt-5">Our Team</h1>
+        <div className="underline"></div>
         {show && (
           <a href="#" className="bt" aria-label="top">
             <AiOutlineArrowUp className="bt-i" />

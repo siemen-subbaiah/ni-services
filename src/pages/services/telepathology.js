@@ -11,12 +11,8 @@ const telepathology = () => {
     <Layout>
       <Seo Sitetitle="Telepathology" />
       <Container>
-        <HeroImg
-          title="Telepathology"
-          description="Telepathology is the electronic transmission of computerized or digital images that can be utilized for diagnostic consultation."
-          path={img}
-          id="#telepathology"
-        />
+        <h1 className="text-center mt-5">Telepathology Services</h1>
+        <div className="underline"></div>
         <div className="more-info my-5" id="telepathology">
           <Row className="justify-content-center align-items-center">
             <Col lg={6} md={12} className="order-2 order-lg-1">

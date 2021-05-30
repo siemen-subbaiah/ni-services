@@ -30,14 +30,6 @@ const Hero = () => {
               className="d-lg-none d-block small-img"
             /> */}
           </div>
-          <Carousel.Caption className="text-start">
-            <h1 className="fw-bold">Nischidha Imaging Services</h1>
-            <Link to="/contact">
-              <button className="btn hero-btn btn-lg text-white my-2">
-                Contact Us
-              </button>
-            </Link>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <div className="hero-img-container">
@@ -52,14 +44,6 @@ const Hero = () => {
               className="d-lg-none d-block small-img"
             /> */}
           </div>
-          <Carousel.Caption className="text-lg-start">
-            <h1 className="fw-bold">Nischidha Imaging Services</h1>
-            <Link to="/contact">
-              <button className="btn hero-btn btn-lg text-white my-2">
-                Contact Us
-              </button>
-            </Link>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <div className="hero-img-container">
@@ -74,40 +58,16 @@ const Hero = () => {
               className="d-lg-none d-block small-img"
             /> */}
           </div>
-          <Carousel.Caption className="text-lg-start">
-            <h1 className="fw-bold">Nischidha Imaging Services</h1>
-            <Link to="/contact">
-              <button className="btn hero-btn btn-lg text-white my-2">
-                Contact Us
-              </button>
-            </Link>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <div className="hero-img-container">
             <img src={slider1} className="hero-img" alt="Fourth slide" />
           </div>
-          <Carousel.Caption className="text-lg-start">
-            <h1 className="fw-bold">Nischidha Imaging Services</h1>
-            <Link to="/contact">
-              <button className="btn hero-btn btn-lg text-white my-2">
-                Contact Us
-              </button>
-            </Link>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <div className="hero-img-container">
             <img src={slider5} className="hero-img" alt="Fifth slide" />
           </div>
-          <Carousel.Caption className="text-lg-start">
-            <h1 className="fw-bold">Nischidha Imaging Services</h1>
-            <Link to="/contact">
-              <button className="btn hero-btn btn-lg text-white my-2">
-                Contact Us
-              </button>
-            </Link>
-          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
 

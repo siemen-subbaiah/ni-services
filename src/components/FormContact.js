@@ -2,6 +2,7 @@ import React from "react"
 import { Button, Col, Container, Form, Row } from "react-bootstrap"
 import { FaAddressCard, FaPhoneAlt } from "react-icons/fa"
 import { FiMail } from "react-icons/fi"
+import ReCAPTCHA from "react-google-recaptcha"
 // import emailjs from "emailjs-com"
 // import { navigate } from "gatsby"
 const FORMSPARK_ACTION_URL = "https://submit-form.com/FjhXcw2p"
@@ -31,6 +32,9 @@ const FormContact = ({ heading, para }) => {
   //   e.target.reset()
   // }
 
+  // function onChange(value) {
+  //   console.log("Captcha value:", value)
+  // }
   return (
     <Container className="my-5">
       <Row className="justify-content-center align-items-center">
@@ -84,6 +88,17 @@ const FormContact = ({ heading, para }) => {
               <Form.Label>Message</Form.Label>
               <Form.Control as="textarea" rows={7} required name="message" />
             </Form.Group>
+            {/* <div
+              className="g-recaptcha"
+              // data-size="compact"
+              data-sitekey="6LfSnf8aAAAAAC7iwS1lFfiXn5Uj2L_JZfhm9VMY"
+            ></div> */}
+            <div className="g-recaptcha my-3">
+              <ReCAPTCHA
+                sitekey="6LfSnf8aAAAAAC7iwS1lFfiXn5Uj2L_JZfhm9VMY"
+                // size="compact"
+              />
+            </div>
             <div className="d-grid gap-2">
               <Button className="hero-btn my-2" type="submit">
                 submit

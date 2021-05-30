@@ -9,10 +9,7 @@ const about = () => {
   return (
     <Layout>
       <Seo Sitetitle="About" />
-      <BackgroundImage
-        title="About us"
-        description="Our company provides teleradiology services (i.e. CT, MRI, X-ray) to hospitals and diagnostic centres in remote parts of India and other parts of world"
-      />
+      <BackgroundImage title="About us" description="" />
       <AboutMain />
       <Testimonials />
     </Layout>

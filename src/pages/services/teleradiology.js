@@ -11,12 +11,8 @@ const teleradiology = () => {
     <Layout>
       <Seo Sitetitle="Teleradiology" />
       <Container>
-        <HeroImg
-          title="Teleradiology"
-          description="Our services include 24X7 Teleradiology support, locum support and emergency support."
-          path={img}
-          id="#teleradiology"
-        />
+        <h1 className="text-center mt-5">Teleradiology Services</h1>
+        <div className="underline"></div>
         <div className="more-info my-5" id="teleradiology">
           <Row className="justify-content-center align-items-center">
             <Col lg={6} md={12} className="order-2 order-lg-1">

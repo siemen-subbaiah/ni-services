@@ -8,10 +8,7 @@ const threeprinting = () => {
   return (
     <Layout>
       <Seo Sitetitle="3d printing" />
-      <BackgroundImage
-        title="3D Printing"
-        description="3D printing is an innovative technology that lets you create a physical object from a digital model"
-      />
+      <BackgroundImage title="3D Printing" description="" />
       <Container>
         <div className="more-info my-5">
           <h3 className="my-3">What is 3D Printing?</h3>

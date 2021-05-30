@@ -17,7 +17,7 @@ const ServicesHome = () => {
             <div className="service-h-card text-center">
               <GiMicroscopeLens className="service-icon mb-3" />
               <h4>Teleradiology</h4>
-              <Link to="/services">
+              <Link to="/services/teleradiology">
                 <button className="btn btn-outline-info my-2">Read More</button>
               </Link>
             </div>
@@ -26,7 +26,7 @@ const ServicesHome = () => {
             <div className="service-h-card text-center">
               <FaMicroscope className="service-icon mb-3" />
               <h4>Telepathology </h4>
-              <Link to="/services">
+              <Link to="/services/telepathology">
                 <button className="btn btn-outline-info my-2">Read More</button>
               </Link>
             </div>
@@ -35,7 +35,7 @@ const ServicesHome = () => {
             <div className="service-h-card text-center">
               <FiPrinter className="service-icon mb-3" />
               <h4>3D Printing</h4>
-              <Link to="/services">
+              <Link to="/3dprinting">
                 <button className="btn btn-outline-info my-2">Read More</button>
               </Link>
             </div>
@@ -44,7 +44,7 @@ const ServicesHome = () => {
             <div className="service-h-card text-center">
               <MdPeopleOutline className="service-icon mb-3" />
               <h4>Second opinion</h4>
-              <Link to="/services">
+              <Link to="/services/second-opinion">
                 <button className="btn btn-outline-info my-2">Read More</button>
               </Link>
             </div>

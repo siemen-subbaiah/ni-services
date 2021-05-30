@@ -13,15 +13,9 @@ const payment = () => {
     <Layout>
       <Seo Sitetitle="Payment" />
       <Container>
+        <h1 className="text-center mt-5">Payment Options</h1>
+        <div className="underline"></div>
         <Row>
-          <Col lg={12} className="order-2 order-lg-1">
-            <HeroImg
-              title="Payment Options"
-              description="Pay for our services online using paytm or bank transfer and leave the hassle of carrying money."
-              path={img}
-              id="#payment"
-            />
-          </Col>
           <Col lg={12} className="order-1 order-lg-2">
             <div className="more-info my-5 text-center" id="payment">
               <Row>

@@ -55,6 +55,10 @@ const BankPayment = () => {
               HDFC0000184
             </p>
             <p>
+              <strong>Swift code : </strong>
+              HDFCINBBBNG
+            </p>
+            <p>
               <strong>Bank name : </strong>
               HDFC Bank
             </p>
