@@ -58,7 +58,7 @@ const Body = () => {
               placeholder="tracedSVG"
               src="../assets/images/covid.svg"
               layout="constrained"
-              alt="finance-img"
+              alt="covid-img"
             />
           </Col>
         </Row>

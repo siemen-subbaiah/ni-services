@@ -12,7 +12,13 @@ const Footer = () => {
         <div className="main-footer">
           <Row>
             <Col xl={3} md={6}>
-              <img src={logo} alt="logo" className="my-3" />
+              <img
+                src={logo}
+                alt="logo"
+                className="my-3"
+                width="60"
+                height="60"
+              />
               <p>
                 <FaAddressCard className="helper-icons" /> : 4086/10 1st B main
                 B Block 2nd Stage Rajajinagar Bangalore-560021

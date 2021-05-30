@@ -10,7 +10,7 @@ const ServicesHome = () => {
   return (
     <section className="servies">
       <Container>
-        <h3 className="text-center">Our Services</h3>
+        <h1 className="text-center h3">Our Services</h1>
         <div className="underline"></div>
         <Row className="justify-content-center align-items-center">
           <Col lg={4} md={12}>

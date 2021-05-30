@@ -20,6 +20,10 @@ a {
   color: #000 !important;
 }
 
+video {
+  width: 100%;
+}
+
 .background-area {
   padding-top: 114px;
   padding-bottom: 114px;

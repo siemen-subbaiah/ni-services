@@ -9,8 +9,9 @@ import slider5 from "../assets/images/slider-5.webp"
 // import mobileSlider1 from "../assets/images/mobile-slider.jpeg"
 // import mobileSlider2 from "../assets/images/mobile-slider2.jpeg"
 // import mobileSlider3 from "../assets/images/mobile-slider3.jpeg"
-import Lottie from "react-lottie-player"
-import lottieJson from "../assets/mylottie.json"
+// import Lottie from "react-lottie-player"
+// import lottieJson from "../assets/mylottie.json"
+import animation from "../assets/animation.mp4"
 
 const Hero = () => {
   return (
@@ -43,7 +44,7 @@ const Hero = () => {
             <img
               src={slider3}
               className="hero-img d-lg-block d-none"
-              alt="First slide"
+              alt="Second slide"
             />
             {/* <img
               src={mobileSlider3}
@@ -84,7 +85,7 @@ const Hero = () => {
         </Carousel.Item>
         <Carousel.Item>
           <div className="hero-img-container">
-            <img src={slider1} className="hero-img" alt="Third slide" />
+            <img src={slider1} className="hero-img" alt="Fourth slide" />
           </div>
           <Carousel.Caption className="text-lg-start">
             <h1 className="fw-bold">Nischidha Imaging Services</h1>
@@ -97,7 +98,7 @@ const Hero = () => {
         </Carousel.Item>
         <Carousel.Item>
           <div className="hero-img-container">
-            <img src={slider5} className="hero-img" alt="Third slide" />
+            <img src={slider5} className="hero-img" alt="Fifth slide" />
           </div>
           <Carousel.Caption className="text-lg-start">
             <h1 className="fw-bold">Nischidha Imaging Services</h1>
@@ -111,7 +112,10 @@ const Hero = () => {
       </Carousel>
 
       <section className="lottie-hero d-lg-none d-block">
-        <Lottie loop animationData={lottieJson} play />
+        {/* <Lottie loop animationData={lottieJson} play /> */}
+        <video autoPlay loop muted playsInline>
+          <source src={animation} type="video/mp4" />
+        </video>
         <div className="lottie-details text-center container my-5">
           <h1>Nischidha Imaging Services</h1>
           <Link to="/contact">
