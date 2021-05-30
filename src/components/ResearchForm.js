@@ -1,10 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import { Container, Form, Button } from "react-bootstrap"
 // import emailjs from "emailjs-com"
 // import { navigate } from "gatsby-link"
+import ReCAPTCHA from "react-google-recaptcha"
 const FORMSPARK_ACTION_URL = "https://submit-form.com/q4h1rlcY"
 
 const ResearchForm = () => {
+  const [form, setForm] = useState("")
   // const [loading, setLoading] = useState(false)
 
   // const handleEmail = e => {
@@ -29,6 +31,19 @@ const ResearchForm = () => {
   //     )
   //   e.target.reset()
   // }
+
+  const handleToken = token => {
+    setForm(currentForm => {
+      return { ...currentForm, token }
+    })
+  }
+
+  const handleExpire = () => {
+    setForm(currentForm => {
+      return { ...currentForm, token: null }
+    })
+  }
+
   return (
     <Container>
       <Form
@@ -105,10 +120,19 @@ const ResearchForm = () => {
           <Form.Label>Statement of Purpose</Form.Label>
           <Form.Control as="textarea" rows={7} required name="purpose" />
         </Form.Group>
+        <div className="g-recaptcha my-3">
+          <ReCAPTCHA
+            sitekey="6LfSnf8aAAAAAC7iwS1lFfiXn5Uj2L_JZfhm9VMY"
+            onChange={handleToken}
+            onExpired={handleExpire}
+          />
+        </div>
         <div className="d-grid gap-2">
-          <Button className="hero-btn my-2" type="submit">
-            Submit
-          </Button>
+          {form && (
+            <Button className="hero-btn my-2" type="submit" aria-required>
+              submit
+            </Button>
+          )}
         </div>
       </Form>
     </Container>

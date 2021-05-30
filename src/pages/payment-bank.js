@@ -1,13 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 import { Col, Container, Form, Row, Button } from "react-bootstrap"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import bankImg from "../assets/images/bank-transfer.png"
+import ReCAPTCHA from "react-google-recaptcha"
 // import emailjs from "emailjs-com"
 // import { navigate } from "gatsby"
 const FORMSPARK_ACTION_URL = "https://submit-form.com/aG8nTrbX"
 
 const BankPayment = () => {
+  const [form, setForm] = useState("")
   // const [loading, setLoading] = useState(false)
   // const handleEmail = e => {
   //   e.preventDefault()
@@ -31,6 +33,18 @@ const BankPayment = () => {
   //     )
   //   e.target.reset()
   // }
+
+  const handleToken = token => {
+    setForm(currentForm => {
+      return { ...currentForm, token }
+    })
+  }
+
+  const handleExpire = () => {
+    setForm(currentForm => {
+      return { ...currentForm, token: null }
+    })
+  }
 
   return (
     <Layout>
@@ -142,10 +156,19 @@ const BankPayment = () => {
                 <Form.Label>Reference ID</Form.Label>
                 <Form.Control type="number" required name="reference-id" />
               </Form.Group>
+              <div className="g-recaptcha my-3">
+                <ReCAPTCHA
+                  sitekey="6LfSnf8aAAAAAC7iwS1lFfiXn5Uj2L_JZfhm9VMY"
+                  onChange={handleToken}
+                  onExpired={handleExpire}
+                />
+              </div>
               <div className="d-grid gap-2">
-                <Button className="hero-btn my-2" type="submit">
-                  Submit
-                </Button>
+                {form && (
+                  <Button className="hero-btn my-2" type="submit" aria-required>
+                    submit
+                  </Button>
+                )}
               </div>
             </Form>
           </Col>

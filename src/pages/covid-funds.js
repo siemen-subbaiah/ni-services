@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Container, Col, Row, Form, Button } from "react-bootstrap"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -6,9 +6,25 @@ import qrCode from "../assets/images/qr-code.jpg"
 import gpay from "../assets/images/g-pay.png"
 import paytm from "../assets/images/paytmupi.png"
 import phonepay from "../assets/images/phonepay.png"
+import ReCAPTCHA from "react-google-recaptcha"
+
 const FORMSPARK_ACTION_URL = "https://submit-form.com/5ludYxuU"
 
-const covidFunds = () => {
+const CovidFunds = () => {
+  const [form, setForm] = useState("")
+
+  const handleToken = token => {
+    setForm(currentForm => {
+      return { ...currentForm, token }
+    })
+  }
+
+  const handleExpire = () => {
+    setForm(currentForm => {
+      return { ...currentForm, token: null }
+    })
+  }
+
   return (
     <Layout>
       <Seo Sitetitle="Covid ICU-Fund raiser" />
@@ -124,10 +140,19 @@ const covidFunds = () => {
             <Form.Label>Transaction Number</Form.Label>
             <Form.Control type="number" required name="transaction-id" />
           </Form.Group>
+          <div className="g-recaptcha my-3">
+            <ReCAPTCHA
+              sitekey="6LfSnf8aAAAAAC7iwS1lFfiXn5Uj2L_JZfhm9VMY"
+              onChange={handleToken}
+              onExpired={handleExpire}
+            />
+          </div>
           <div className="d-grid gap-2">
-            <Button className="hero-btn my-2" type="submit">
-              Submit
-            </Button>
+            {form && (
+              <Button className="hero-btn my-2" type="submit" aria-required>
+                submit
+              </Button>
+            )}
           </div>
         </Form>
       </Container>
@@ -135,4 +160,4 @@ const covidFunds = () => {
   )
 }
 
-export default covidFunds
+export default CovidFunds

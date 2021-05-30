@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import { Col, Container, Form, Row, Button } from "react-bootstrap"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ReCAPTCHA from "react-google-recaptcha"
 import paytmImg from "../assets/images/paytm.png"
 import qrCode from "../assets/images/qr-code.jpg"
 // import emailjs from "emailjs-com"
@@ -9,6 +10,8 @@ import qrCode from "../assets/images/qr-code.jpg"
 const FORMSPARK_ACTION_URL = "https://submit-form.com/8kWAnAIc"
 
 const PaytmPayment = () => {
+  const [form, setForm] = useState("")
+
   // const [loading, setLoading] = useState(false)
   // const handleEmail = e => {
   //   e.preventDefault()
@@ -32,6 +35,18 @@ const PaytmPayment = () => {
   //     )
   //   e.target.reset()
   // }
+
+  const handleToken = token => {
+    setForm(currentForm => {
+      return { ...currentForm, token }
+    })
+  }
+
+  const handleExpire = () => {
+    setForm(currentForm => {
+      return { ...currentForm, token: null }
+    })
+  }
 
   return (
     <Layout>
@@ -128,10 +143,19 @@ const PaytmPayment = () => {
                 <Form.Label>Transaction Number</Form.Label>
                 <Form.Control type="number" required name="transaction-id" />
               </Form.Group>
+              <div className="g-recaptcha my-3">
+                <ReCAPTCHA
+                  sitekey="6LfSnf8aAAAAAC7iwS1lFfiXn5Uj2L_JZfhm9VMY"
+                  onChange={handleToken}
+                  onExpired={handleExpire}
+                />
+              </div>
               <div className="d-grid gap-2">
-                <Button className="hero-btn my-2" type="submit">
-                  Submit
-                </Button>
+                {form && (
+                  <Button className="hero-btn my-2" type="submit" aria-required>
+                    submit
+                  </Button>
+                )}
               </div>
             </Form>
           </Col>

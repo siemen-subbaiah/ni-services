@@ -45,8 +45,6 @@ const FormContact = ({ heading, para }) => {
     })
   }
 
-  console.log(form)
-
   return (
     <Container className="my-5">
       <Row className="justify-content-center align-items-center">
@@ -119,7 +117,6 @@ const FormContact = ({ heading, para }) => {
                 </Button>
               )}
             </div>
-            {console.log(form)}
           </Form>
         </Col>
       </Row>
