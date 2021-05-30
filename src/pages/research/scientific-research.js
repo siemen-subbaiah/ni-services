@@ -9,14 +9,10 @@ import { Link } from "gatsby"
 const scientificResearch = () => {
   return (
     <Layout>
-      <Seo Sitetitle="Scientific Research" />
+      <Seo Sitetitle="Scientific Medical Research" />
       <Container>
-        <HeroImg
-          title="Scientific Research"
-          description={`Medical research encompasses a wide array of research, extending from "basic research" (also called bench science or bench research)`}
-          path={img}
-          id="#scientific_research"
-        />
+        <h1 className="text-center mt-5">Scientific Medical Research</h1>
+        <div className="underline"></div>
         <div className="more-info my-5" id="scientific_research">
           <div className="requirement">
             <h4>Research Assistant : </h4>

@@ -9,14 +9,12 @@ import { Link } from "gatsby"
 const deepLearning = () => {
   return (
     <Layout>
-      <Seo Sitetitle="Deep Learning" />
+      <Seo Sitetitle="Deep Learning (Artificial Intelligence)" />
       <Container>
-        <HeroImg
-          title="Deep Learning"
-          description="Deep learning is a subset of machine learning in artificial intelligence that has networks capable of learning unsupervised from data that is unstructured or unlabeled"
-          path={img}
-          id="#deep_learning"
-        />
+        <h1 className="text-center mt-5">
+          Deep Learning (Artificial Intelligence)
+        </h1>
+        <div className="underline"></div>
         <div className="more-info my-5" id="deep_learning">
           <div className="requirement">
             <h4>Internship : </h4>
