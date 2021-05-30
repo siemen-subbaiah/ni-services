@@ -11,18 +11,18 @@ const Body = () => {
         <Row className="justify-content-center align-items-center">
           <Col lg={6}>
             <div className="my-5">
-              <h5 className="info-one-heading text-center text-lg-start">
+              <h1 className="info-one-heading h5 fw-bold text-center text-lg-start">
                 OUR VISION
-              </h5>
-              <h4 className="info-heading">
+              </h1>
+              <p className="info-heading">
                 is to provide best quality telemedicine services including{" "}
                 <span className="color">teleradiology</span> and
                 <span className="color"> telepathology</span>
-              </h4>
+              </p>
             </div>
-            <h5 className="info-one-heading text-center text-lg-start">
+            <h1 className="info-one-heading fw-bold h5 text-center text-lg-start">
               COVID HELP
-            </h5>
+            </h1>
             <p className="info-heading">
               Dedicated healthcare facility by providing Intensive Care Unit
               <span className="color">(ICU)</span> in treatment and management

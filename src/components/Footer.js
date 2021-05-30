@@ -27,7 +27,7 @@ const Footer = () => {
             </Col>
             <Col xl={3} md={6}>
               <div className="heading my-3">
-                <h5>Services</h5>
+                <h1 className="h5">Services</h1>
               </div>
               <ul>
                 <li>
@@ -46,7 +46,7 @@ const Footer = () => {
             </Col>
             <Col xl={3} md={6}>
               <div className="heading my-3">
-                <h5>About</h5>
+                <h1 className="h5">About</h1>
               </div>
               <ul>
                 <li>
@@ -65,7 +65,7 @@ const Footer = () => {
             </Col>
             <Col xl={3} md={6}>
               <div className="heading my-3">
-                <h5>Support</h5>
+                <h1 className="h5">Support</h1>
               </div>
               <ul>
                 <li>
@@ -88,13 +88,19 @@ const Footer = () => {
               </p>
             </Col>
             <Col xl={6} md={12} className="text-lg-end text-center">
-              <a href="https://www.facebook.com/nispl.in/">
+              <a
+                href="https://www.facebook.com/nispl.in/"
+                aria-label="facebook"
+              >
                 <SiFacebook className="social-links" />
               </a>
-              <a href="https://twitter.com/Nischidha_ispl">
+              <a href="https://twitter.com/Nischidha_ispl" aria-label="twitter">
                 <SiLinkedin className="social-links" />
               </a>
-              <a href="https://www.linkedin.com/company/nischidha-imaging-services-private-limited/">
+              <a
+                href="https://www.linkedin.com/company/nischidha-imaging-services-private-limited/"
+                aria-label="linkedin"
+              >
                 <SiTwitter className="social-links" />
               </a>
             </Col>

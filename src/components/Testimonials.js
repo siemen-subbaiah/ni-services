@@ -9,7 +9,9 @@ const Testimonials = () => {
   return (
     <div className="testimonials">
       <Container className="my-5">
-        <h6 className="my-3 text-center info-one-heading">TESTIMONIALS</h6>
+        <h1 className="my-3 text-center info-one-heading h6 fw-bold">
+          TESTIMONIALS
+        </h1>
         <h2 className="my-3 text-center">
           What do people praise about our
           <span className="color"> services</span>
@@ -34,9 +36,9 @@ const Testimonials = () => {
                 <AiFillStar className="star" />
                 <AiFillStar className="star" />
                 <AiFillStar className="star" />
-                <h6 className="person-name1">
+                <h1 className="person-name1 h6">
                   ~ {item.person} / <span className="loc">{item.location}</span>
-                </h6>
+                </h1>
                 <p>{item.msg}</p>
               </div>
             )

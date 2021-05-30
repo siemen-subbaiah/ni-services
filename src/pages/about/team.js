@@ -34,7 +34,7 @@ const Team = () => {
           id="#team"
         />
         {show && (
-          <a href="#" className="bt">
+          <a href="#" className="bt" aria-label="top">
             <AiOutlineArrowUp className="bt-i" />
           </a>
         )}
