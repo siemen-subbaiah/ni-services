@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Button, Col, Container, Form, Row } from "react-bootstrap"
 import { FaAddressCard, FaPhoneAlt } from "react-icons/fa"
 import { FiMail } from "react-icons/fi"
@@ -8,6 +8,7 @@ import ReCAPTCHA from "react-google-recaptcha"
 const FORMSPARK_ACTION_URL = "https://submit-form.com/FjhXcw2p"
 
 const FormContact = ({ heading, para }) => {
+  const [form, setForm] = useState("")
   // const [loading, setLoading] = useState(false)
   // const handleEmail = e => {
   //   e.preventDefault()
@@ -32,9 +33,20 @@ const FormContact = ({ heading, para }) => {
   //   e.target.reset()
   // }
 
-  // function onChange(value) {
-  //   console.log("Captcha value:", value)
-  // }
+  const handleToken = token => {
+    setForm(currentForm => {
+      return { ...currentForm, token }
+    })
+  }
+
+  const handleExpire = () => {
+    setForm(currentForm => {
+      return { ...currentForm, token: null }
+    })
+  }
+
+  console.log(form)
+
   return (
     <Container className="my-5">
       <Row className="justify-content-center align-items-center">
@@ -96,14 +108,18 @@ const FormContact = ({ heading, para }) => {
             <div className="g-recaptcha my-3">
               <ReCAPTCHA
                 sitekey="6LfSnf8aAAAAAC7iwS1lFfiXn5Uj2L_JZfhm9VMY"
-                // size="compact"
+                onChange={handleToken}
+                onExpired={handleExpire}
               />
             </div>
             <div className="d-grid gap-2">
-              <Button className="hero-btn my-2" type="submit">
-                submit
-              </Button>
+              {form && (
+                <Button className="hero-btn my-2" type="submit" aria-required>
+                  submit
+                </Button>
+              )}
             </div>
+            {console.log(form)}
           </Form>
         </Col>
       </Row>

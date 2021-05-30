@@ -2,7 +2,6 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import { Col, Container, Row } from "react-bootstrap"
-import { RiArrowDropRightLine } from "react-icons/ri"
 
 const Body = () => {
   return (
@@ -46,7 +45,7 @@ const Body = () => {
                 className="d-flex justify-content-center d-lg-block"
               >
                 <button className="btn hero-btn text-white my-2 body-btn">
-                  Request Form <RiArrowDropRightLine />
+                  Request Form
                 </button>
               </Link>
               <Link
@@ -54,7 +53,7 @@ const Body = () => {
                 className="d-flex justify-content-center d-lg-block"
               >
                 <button className="btn btn-success text-white my-2 body-btn">
-                  Donate Now <RiArrowDropRightLine />
+                  Donate Now
                 </button>
               </Link>
             </div>
