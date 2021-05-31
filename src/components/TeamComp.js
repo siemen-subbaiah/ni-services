@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { Accordion, Card, Col, Container, Row } from "react-bootstrap"
 import { data } from "../constants/TeamMembers"
+import { IoMdArrowDropdown } from "react-icons/io"
 import "aos/dist/aos.css"
 import AOS from "aos"
 
@@ -23,8 +24,13 @@ const TeamComp = () => {
         <Col xl={12} id="team">
           <Accordion>
             <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="0">
+              <Accordion.Toggle
+                as={Card.Header}
+                eventKey="0"
+                className="d-flex align-items-center justify-content-between"
+              >
                 <h1 className="h5">Radiology</h1>
+                <IoMdArrowDropdown className="dropdown" />
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="0">
                 <Card.Body>
@@ -68,8 +74,13 @@ const TeamComp = () => {
               </Accordion.Collapse>
             </Card>
             <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="1">
+              <Accordion.Toggle
+                as={Card.Header}
+                eventKey="1"
+                className="d-flex align-items-center justify-content-between"
+              >
                 <h1 className="h5">Pathology</h1>
+                <IoMdArrowDropdown className="dropdown" />
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="1">
                 <Card.Body>

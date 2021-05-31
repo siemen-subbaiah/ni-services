@@ -154,6 +154,10 @@ nav {
   cursor: pointer;
 }
 
+.dropdown {
+  font-size: 1.35rem;
+}
+
 /* HOME-SERVICES */
 
 .service-h-card {
