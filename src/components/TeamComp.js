@@ -21,7 +21,7 @@ const TeamComp = () => {
     <Container className="my-5">
       <Row>
         <Col xl={12} id="team">
-          <Accordion defaultActiveKey="0">
+          <Accordion>
             <Card>
               <Accordion.Toggle as={Card.Header} eventKey="0">
                 <h1 className="h5">Radiology</h1>
