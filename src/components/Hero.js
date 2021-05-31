@@ -76,12 +76,12 @@ const Hero = () => {
         <video autoPlay loop muted playsInline>
           <source src={animation} type="video/mp4" />
         </video>
-        <div className="lottie-details text-center container my-5">
+        {/* <div className="lottie-details text-center container my-5">
           <h1>Nischidha Imaging Services</h1>
           <Link to="/contact">
             <button className="btn hero-btn text-white">Contact Us</button>
           </Link>
-        </div>
+        </div> */}
       </section>
     </section>
   )

@@ -48,10 +48,13 @@ const CovidFunds = () => {
                 Services Pvt Ltd
               </p>
               <p>
-                <strong> Account No : </strong>50200028932540
+                <strong> Account no : </strong>50200028932540
               </p>
               <p>
-                <strong>IFSC : </strong>HDFC0000184
+                <strong>IFSC no: </strong>HDFC0000184
+              </p>
+              <p>
+                <strong>Swift code : </strong>HDFCINBBBNG
               </p>
               <p>
                 <strong>Bank and Branch : </strong> HDFCBank, Indiranagar CMH

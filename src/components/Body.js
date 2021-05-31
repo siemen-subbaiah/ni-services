@@ -8,7 +8,7 @@ const Body = () => {
     <section className="info-section my-3 my-lg-5">
       <Container>
         <Row className="justify-content-center align-items-center">
-          <div className="my-5">
+          <div className="my-2 my-lg-5">
             <h1 className="info-one-heading h5 fw-bold text-center">
               OUR VISION
             </h1>
