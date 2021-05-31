@@ -2,6 +2,7 @@ import React from "react"
 import { Container } from "react-bootstrap"
 import BackgroundImage from "../components/BackgroundImage"
 import Layout from "../components/layout"
+import ResearchForm from "../components/ResearchForm"
 import Seo from "../components/seo"
 
 const threeprinting = () => {
@@ -54,6 +55,7 @@ const threeprinting = () => {
             involved.
           </p>
         </div>
+        <ResearchForm />
       </Container>
     </Layout>
   )

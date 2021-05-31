@@ -5,6 +5,7 @@ import img from "../../assets/images/opinion.svg"
 import HeroImg from "../../components/HeroImg"
 import { Col, Container, Row } from "react-bootstrap"
 import { StaticImage } from "gatsby-plugin-image"
+import ResearchForm from "../../components/ResearchForm"
 
 const secondOpinion = () => {
   return (
@@ -38,6 +39,7 @@ const secondOpinion = () => {
             </Col>
           </Row>
         </div>
+        <ResearchForm />
       </Container>
     </Layout>
   )

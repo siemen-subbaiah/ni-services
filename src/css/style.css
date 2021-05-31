@@ -69,6 +69,12 @@ video {
   margin-right: 1rem;
 }
 
+.t-head {
+  position: relative;
+  left: 28rem;
+  top: 0.5rem;
+}
+
 /* NAVBAR! */
 nav {
   background-color: #fff;

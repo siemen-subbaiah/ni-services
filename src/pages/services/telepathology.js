@@ -1,4 +1,5 @@
 import React from "react"
+import ResearchForm from "../../components/ResearchForm"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import img from "../../assets/images/telepathology.svg"
@@ -58,6 +59,7 @@ const telepathology = () => {
             diagnosis.
           </p>
         </div>
+        <ResearchForm />
       </Container>
     </Layout>
   )

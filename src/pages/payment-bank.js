@@ -164,11 +164,9 @@ const BankPayment = () => {
                 />
               </div>
               <div className="d-grid gap-2">
-                {form && (
-                  <Button className="hero-btn my-2" type="submit" aria-required>
-                    submit
-                  </Button>
-                )}
+                <Button className="hero-btn my-2" type="submit" aria-required>
+                  submit
+                </Button>
               </div>
             </Form>
           </Col>

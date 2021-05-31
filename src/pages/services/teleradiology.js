@@ -5,6 +5,7 @@ import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import img from "../../assets/images/teleradiology.svg"
 import { StaticImage } from "gatsby-plugin-image"
+import ResearchForm from "../../components/ResearchForm"
 
 const teleradiology = () => {
   return (
@@ -43,6 +44,7 @@ const teleradiology = () => {
             </Col>
           </Row>
         </div>
+        <ResearchForm />
       </Container>
     </Layout>
   )
