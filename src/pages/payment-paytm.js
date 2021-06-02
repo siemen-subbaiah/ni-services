@@ -137,6 +137,15 @@ const PaytmPayment = () => {
                 <Form.Control type="number" required name="amount" />
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlInput1">
+                <Form.Label>Pan Number</Form.Label>
+                <Form.Control
+                  type="number"
+                  placeholder="enter your pan number"
+                  required
+                  name="pan-number"
+                />
+              </Form.Group>
+              <Form.Group controlId="exampleForm.ControlInput1">
                 <p>
                   After successful payment, please enter the transaction number:
                 </p>
@@ -151,11 +160,9 @@ const PaytmPayment = () => {
                 />
               </div>
               <div className="d-grid gap-2">
-              
-                  <Button className="hero-btn my-2" type="submit" aria-required>
-                    submit
-                  </Button>
-      
+                <Button className="hero-btn my-2" type="submit" aria-required>
+                  submit
+                </Button>
               </div>
             </Form>
           </Col>

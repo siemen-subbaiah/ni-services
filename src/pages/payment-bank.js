@@ -152,6 +152,15 @@ const BankPayment = () => {
                 <Form.Control type="number" required name="amount" />
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlInput1">
+                <Form.Label>Pan Number</Form.Label>
+                <Form.Control
+                  type="number"
+                  placeholder="enter your pan number"
+                  required
+                  name="pan-number"
+                />
+              </Form.Group>
+              <Form.Group controlId="exampleForm.ControlInput1">
                 <p>After successful payment, please enter the Reference ID:</p>
                 <Form.Label>Reference ID</Form.Label>
                 <Form.Control type="number" required name="reference-id" />

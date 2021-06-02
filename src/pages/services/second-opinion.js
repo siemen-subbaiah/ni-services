@@ -6,6 +6,7 @@ import HeroImg from "../../components/HeroImg"
 import { Col, Container, Row } from "react-bootstrap"
 import { StaticImage } from "gatsby-plugin-image"
 import ResearchForm from "../../components/ResearchForm"
+import CommercialForm from "../../components/CommercialForm"
 
 const secondOpinion = () => {
   return (
@@ -39,7 +40,7 @@ const secondOpinion = () => {
             </Col>
           </Row>
         </div>
-        <ResearchForm />
+        <CommercialForm />
       </Container>
     </Layout>
   )

@@ -71,7 +71,7 @@ video {
 
 .t-head {
   position: relative;
-  left: 28rem;
+  left: 24rem;
   top: 0.5rem;
 }
 
@@ -117,14 +117,6 @@ nav {
 .hero-btn {
   background-color: #267cdd !important;
   border-color: #267cdd !important;
-}
-
-.hero-img-container::before {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 100%;
-  width: 100%;
-  position: absolute;
 }
 
 .carousel-caption {

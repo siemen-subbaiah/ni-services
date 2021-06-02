@@ -86,6 +86,15 @@ const FormContact = ({ heading, para }) => {
               />
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlInput1">
+              <Form.Label>Number</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter your number"
+                required
+                name="number"
+              />
+            </Form.Group>
+            <Form.Group controlId="exampleForm.ControlInput1">
               <Form.Label>Email address</Form.Label>
               <Form.Control
                 type="email"

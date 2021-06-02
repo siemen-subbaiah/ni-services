@@ -13,7 +13,7 @@ const Testimonials = () => {
           TESTIMONIALS
         </h1>
         <h2 className="my-3 text-center">
-          What do people praise about our
+          What do people say about our
           <span className="color"> services</span>
         </h2>
         <Carousel

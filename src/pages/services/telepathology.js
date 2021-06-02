@@ -6,6 +6,7 @@ import img from "../../assets/images/telepathology.svg"
 import HeroImg from "../../components/HeroImg"
 import { Col, Container, Row } from "react-bootstrap"
 import { StaticImage } from "gatsby-plugin-image"
+import CommercialForm from "../../components/CommercialForm"
 
 const telepathology = () => {
   return (
@@ -59,7 +60,7 @@ const telepathology = () => {
             diagnosis.
           </p>
         </div>
-        <ResearchForm />
+        <CommercialForm />
       </Container>
     </Layout>
   )
