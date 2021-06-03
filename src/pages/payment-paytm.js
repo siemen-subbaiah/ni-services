@@ -75,7 +75,7 @@ const PaytmPayment = () => {
               <input
                 type="hidden"
                 name="_redirect"
-                value="https://epic-meninsky-607a02.netlify.app/thank-you3"
+                value="https://nischidhaimagingservices.com/thank-you3"
               />
               <input
                 type="hidden"
@@ -154,7 +154,7 @@ const PaytmPayment = () => {
               </Form.Group>
               <div className="g-recaptcha my-3">
                 <ReCAPTCHA
-                  sitekey="6LfSnf8aAAAAAC7iwS1lFfiXn5Uj2L_JZfhm9VMY"
+                  sitekey="6LelwgsbAAAAABnPca5i0OkuvByGedUq4Tr1M9CF"
                   onChange={handleToken}
                   onExpired={handleExpire}
                 />
