@@ -92,6 +92,12 @@ const Footer = () => {
                 &copy; {new Date().getFullYear()} Nischidha Imaging Services.
                 All Rights Reserved.
               </p>
+              <p>
+                Website developed by{" "}
+                <a className="colorr" href="https://www.droper.ml">
+                  Droper
+                </a>
+              </p>
             </Col>
             <Col xl={6} md={12} className="text-lg-end text-center">
               <a

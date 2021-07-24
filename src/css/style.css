@@ -113,6 +113,9 @@ nav {
 .color {
   color: #267cdd;
 }
+.colorr {
+  color: #267cdd !important;
+}
 
 .hero-btn {
   background-color: #267cdd !important;
