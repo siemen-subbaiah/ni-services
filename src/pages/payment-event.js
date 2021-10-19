@@ -65,7 +65,11 @@ const PaymentEvent = () => {
                 <input
                   type="hidden"
                   name="reference_id"
-                  value={localStorage.getItem("ref")}
+                  value={
+                    typeof window !== "undefined"
+                      ? localStorage.getItem("ref")
+                      : null
+                  }
                 />
                 <Form.Label>First Name</Form.Label>
                 <Form.Control

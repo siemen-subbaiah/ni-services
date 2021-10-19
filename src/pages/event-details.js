@@ -30,7 +30,9 @@ const EventDetails = () => {
           console.log(error.text)
         }
       )
-    localStorage.setItem("ref", `TD9${rand}`)
+    typeof window !== "undefined"
+      ? localStorage.setItem("ref", `TD9${rand}`)
+      : null
     e.target.reset()
   }
 
