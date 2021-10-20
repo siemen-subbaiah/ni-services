@@ -7,6 +7,11 @@ import Seo from "../components/seo"
 
 const EventDetails = () => {
   const [loading, setLoading] = useState(false)
+  const [name, setName] = useState("")
+  const [designation, setDesignation] = useState("")
+  const [profession, setProfession] = useState("")
+  const [number, setNumber] = useState("")
+  const [email, setEmail] = useState("")
 
   const rand = Math.floor(Math.random() * (999 - 100 + 1) + 100)
 
@@ -30,8 +35,19 @@ const EventDetails = () => {
           console.log(error.text)
         }
       )
+
     typeof window !== "undefined"
-      ? localStorage.setItem("ref", `TD9${rand}`)
+      ? localStorage.setItem(
+          "data",
+          JSON.stringify({
+            name,
+            designation,
+            profession,
+            email,
+            number,
+            ref: `TD9${rand}`,
+          })
+        )
       : null
     e.target.reset()
   }
@@ -50,6 +66,8 @@ const EventDetails = () => {
               placeholder="Enter your name"
               required
               name="name"
+              value={name}
+              onChange={e => setName(e.target.value)}
             />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlInput1">
@@ -59,6 +77,8 @@ const EventDetails = () => {
               placeholder="Enter your designation"
               required
               name="designation"
+              value={designation}
+              onChange={e => setDesignation(e.target.value)}
             />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlInput1">
@@ -68,6 +88,8 @@ const EventDetails = () => {
               placeholder="Enter your Profession/Branch"
               required
               name="profession"
+              value={profession}
+              onChange={e => setProfession(e.target.value)}
             />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlInput1">
@@ -77,6 +99,8 @@ const EventDetails = () => {
               placeholder="Enter your number"
               required
               name="number"
+              value={number}
+              onChange={e => setNumber(e.target.value)}
             />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlInput1">
@@ -86,6 +110,8 @@ const EventDetails = () => {
               placeholder="Enter your email address"
               required
               name="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
             />
           </Form.Group>
           {loading ? (

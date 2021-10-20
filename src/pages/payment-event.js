@@ -42,7 +42,7 @@ const PaymentEvent = () => {
           </Col>
           <Col lg={6} md={12}>
             <Form
-              className="my-form"
+              className="my-form my-3 my-lg-0"
               method="POST"
               action={FORMSPARK_ACTION_URL}
             >
@@ -61,69 +61,61 @@ const PaymentEvent = () => {
                 name="_email.template.footer"
                 value="false"
               />
-              <Form.Group controlId="exampleForm.ControlInput1">
-                <input
-                  type="hidden"
-                  name="reference_id"
-                  value={
-                    typeof window !== "undefined"
-                      ? localStorage.getItem("ref")
-                      : null
-                  }
-                />
-                <Form.Label>First Name</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter your first name"
-                  required
-                  name="first-name"
-                />
-              </Form.Group>
-              <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>Last Name</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter your last name"
-                  required
-                  name="last-name"
-                />
-              </Form.Group>
-              <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>Designation</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter your designation"
-                  required
-                  name="designation"
-                />
-              </Form.Group>
-              <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>Profession/Branch</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter your Profession/Branch"
-                  required
-                  name="profession"
-                />
-              </Form.Group>
-              <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Enter your email address"
-                  required
-                  name="email"
-                />
-              </Form.Group>
-              <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>Mobile no</Form.Label>
-                <Form.Control
-                  type="number"
-                  placeholder="Enter your mobile number"
-                  required
-                  name="contact number"
-                />
-              </Form.Group>
+
+              <input
+                type="hidden"
+                name="Name"
+                value={
+                  typeof window !== "undefined"
+                    ? JSON.parse(localStorage.getItem("data")).name
+                    : null
+                }
+              />
+              <input
+                type="hidden"
+                name="Designation"
+                value={
+                  typeof window !== "undefined"
+                    ? JSON.parse(localStorage.getItem("data")).designation
+                    : null
+                }
+              />
+              <input
+                type="hidden"
+                name="Profession"
+                value={
+                  typeof window !== "undefined"
+                    ? JSON.parse(localStorage.getItem("data")).profession
+                    : null
+                }
+              />
+              <input
+                type="hidden"
+                name="Email"
+                value={
+                  typeof window !== "undefined"
+                    ? JSON.parse(localStorage.getItem("data")).email
+                    : null
+                }
+              />
+              <input
+                type="hidden"
+                name="Number"
+                value={
+                  typeof window !== "undefined"
+                    ? JSON.parse(localStorage.getItem("data")).number
+                    : null
+                }
+              />
+              <input
+                type="hidden"
+                name="reference_id"
+                value={
+                  typeof window !== "undefined"
+                    ? JSON.parse(localStorage.getItem("data")).ref
+                    : null
+                }
+              />
               <Form.Group controlId="exampleForm.ControlInput1">
                 <Form.Label>Amount</Form.Label>
                 <Form.Control
