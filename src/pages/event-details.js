@@ -36,19 +36,19 @@ const EventDetails = () => {
         }
       )
 
-    typeof window !== "undefined"
-      ? localStorage.setItem(
-          "data",
-          JSON.stringify({
-            name,
-            designation,
-            profession,
-            email,
-            number,
-            ref: `TD9${rand}`,
-          })
-        )
-      : null
+    // typeof window !== "undefined"
+    //   ? localStorage.setItem(
+    //       "data",
+    //       JSON.stringify({
+    //         name,
+    //         designation,
+    //         profession,
+    //         email,
+    //         number,
+    //         ref: `TD9${rand}`,
+    //       })
+    //     )
+    //   : null
     e.target.reset()
   }
 
@@ -93,10 +93,10 @@ const EventDetails = () => {
             />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Label>Number</Form.Label>
+            <Form.Label>Phone Number</Form.Label>
             <Form.Control
               type="number"
-              placeholder="Enter your number"
+              placeholder="Enter your phone number"
               required
               name="number"
               value={number}

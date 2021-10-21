@@ -1,10 +1,10 @@
 import React from "react"
 import { Col, Container, Row } from "react-bootstrap"
-import BackgroundImage from "../components/BackgroundImage"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import TranquilDoc from "../assets/images/TranquilDoc.jpg"
-import TranquilDoc8 from "../assets/images/TranquilDoc-8.jpg"
+import BackgroundImage from "../../components/BackgroundImage"
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
+import TranquilDoc from "../../assets/images/TranquilDoc.jpg"
+import TranquilDoc8 from "../../assets/images/TranquilDoc-8.jpg"
 import { Link } from "gatsby"
 
 const events = () => {
@@ -21,31 +21,13 @@ const events = () => {
                   <div className="service-h-card">
                     <img
                       src={TranquilDoc}
-                      alt="TranquilDoc-img"
-                      width="150"
-                      height="150"
+                      alt="TranquilDoc8-img"
+                      className="img-fluid tran"
                     />
-                    <h4>TranquilDoc-9: Infatuation</h4>
-                    <p className="text-start">
-                      TranquilDoc is back after COVID19 pandemic. It's a series
-                      of event for all the young hard working dynamic doctors.
-                      Rejuvenate, Rejoice and reload.
-                    </p>
-                    <p className="text-start">
-                      <strong>Venue :</strong> Angrezi- Bollywood bar and
-                      Kitchen
-                    </p>
-                    <p className="text-start">
-                      {" "}
-                      <strong>Date :</strong> 06th November 2021
-                    </p>
-                    <p className="text-start">
-                      {" "}
-                      <strong>Time :</strong> 18:00 - 23:45 hrs.
-                    </p>
-                    <Link to="/event-details">
+                    <h4>TranquilDoc-9</h4>
+                    <Link to="/events/TranquilDoc-9">
                       <button className="btn text-white hero-btn">
-                        Register
+                        Read More
                       </button>
                     </Link>
                   </div>

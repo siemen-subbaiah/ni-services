@@ -27,13 +27,14 @@ const PaymentEvent = () => {
       <Seo Sitetitle="Payment-PayTM" />
       <h2 className="mt-4 text-center">Event Payment</h2>
       <div className="underline"></div>
+      <h4 className="my-4 text-start text-lg-center">
+        Please make your payment by scanning the below QR code:
+      </h4>
       <Container>
         <Row className="justify-content-center align-items-center my-5">
           <Col lg={6} md={12}>
             {/* <img src={paytmImg} alt="paytm-img" /> */}
-            <h4 className="my-4">
-              Please make your payment by scanning the below QR code:
-            </h4>
+            <p className="my-3">Registration Fees : 1000Rs (GST 18%)</p>
             <p>
               <strong>Mobile Number : </strong>
               9844546546
@@ -49,7 +50,7 @@ const PaymentEvent = () => {
               <input
                 type="hidden"
                 name="_redirect"
-                value="https://nischidhaimagingservices.com/thank-you3"
+                value="https://nischidhaimagingservices.com/events/TranquilDoc-9"
               />
               <input
                 type="hidden"
@@ -67,7 +68,7 @@ const PaymentEvent = () => {
                 name="Name"
                 value={
                   typeof window !== "undefined"
-                    ? JSON.parse(localStorage.getItem("data")).name
+                    ? JSON.parse(localStorage.getItem("data"))?.name
                     : null
                 }
               />
@@ -76,7 +77,7 @@ const PaymentEvent = () => {
                 name="Designation"
                 value={
                   typeof window !== "undefined"
-                    ? JSON.parse(localStorage.getItem("data")).designation
+                    ? JSON.parse(localStorage.getItem("data"))?.designation
                     : null
                 }
               />
@@ -85,7 +86,7 @@ const PaymentEvent = () => {
                 name="Profession"
                 value={
                   typeof window !== "undefined"
-                    ? JSON.parse(localStorage.getItem("data")).profession
+                    ? JSON.parse(localStorage.getItem("data"))?.profession
                     : null
                 }
               />
@@ -94,7 +95,7 @@ const PaymentEvent = () => {
                 name="Email"
                 value={
                   typeof window !== "undefined"
-                    ? JSON.parse(localStorage.getItem("data")).email
+                    ? JSON.parse(localStorage.getItem("data"))?.email
                     : null
                 }
               />
@@ -103,7 +104,7 @@ const PaymentEvent = () => {
                 name="Number"
                 value={
                   typeof window !== "undefined"
-                    ? JSON.parse(localStorage.getItem("data")).number
+                    ? JSON.parse(localStorage.getItem("data"))?.number
                     : null
                 }
               />
@@ -112,19 +113,10 @@ const PaymentEvent = () => {
                 name="reference_id"
                 value={
                   typeof window !== "undefined"
-                    ? JSON.parse(localStorage.getItem("data")).ref
+                    ? JSON.parse(localStorage.getItem("data"))?.ref
                     : null
                 }
               />
-              <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>Amount</Form.Label>
-                <Form.Control
-                  type="number"
-                  required
-                  name="amount"
-                  maxLength="4"
-                />
-              </Form.Group>
               <Form.Group controlId="exampleForm.ControlInput1">
                 <p>
                   After successful payment, please enter the transaction number:

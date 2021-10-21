@@ -11,6 +11,14 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
+.tran {
+  height: 120px !important;
+}
+
+.tran2 {
+  height: 200px !important;
+}
+
 ul {
   list-style: none;
 }
