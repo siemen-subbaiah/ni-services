@@ -462,6 +462,10 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .tran2 {
+    height: 100px !important;
+  }
+
   .top-heading h3 {
     font-size: 1rem;
   }

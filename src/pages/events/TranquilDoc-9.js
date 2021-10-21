@@ -4,13 +4,14 @@ import Seo from "../../components/seo"
 import TranquilDoc from "../../assets/images/TranquilDoc.jpg"
 import { Link } from "gatsby"
 import { Container } from "react-bootstrap"
+import TableComp from "../../components/TableComp"
 
 const TranquilDoc9 = () => {
   return (
     <Layout>
       <Seo Sitetitle="TranquilDoc-9" />
       <Container className="my-5">
-        <div className="service-h-card">
+        <div className="service-h-card my-5">
           <div className="text-center">
             <img src={TranquilDoc} alt="TranquilDoc-img" className="tran2" />
           </div>
@@ -35,6 +36,7 @@ const TranquilDoc9 = () => {
             <button className="btn text-white hero-btn">Register</button>
           </Link>
         </div>
+        <TableComp className="my-5" />
       </Container>
     </Layout>
   )
