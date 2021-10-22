@@ -19,11 +19,10 @@ const TranquilDoc9 = () => {
       )
       const userSnapShot = await getDocs(allUsers)
       const userList = setUsers(userSnapShot.docs.map(doc => doc.data()))
+      console.log(userList)
     }
     getUsers()
   }, [])
-
-  console.log(users)
 
   return (
     <Layout>
@@ -50,16 +49,14 @@ const TranquilDoc9 = () => {
             {" "}
             <strong>Time :</strong> 18:00 - 23:45 hrs.
           </p>
-          <div className="btns">
-            <a
-              className="btn text-white hero-btn"
-              href="https://www.facebook.com/events/s/tranquidoc-9-infatuation/3074057026210813/"
-            >
-              FB Details{" "}
+          <Link to="/event-details">
+            <button className="btn text-white hero-btn">Register</button>
+          </Link>
+          <div className="my-3">
+            <a href="https://facebook.com/events/s/tranquidoc-9-infatuation/3074057026210813/">
+              Check updates in{" "}
+              <span style={{ color: "#3b5998 " }}>Facebook</span>
             </a>
-            <Link to="/event-details">
-              <button className="btn text-white hero-btn">Register</button>
-            </Link>
           </div>
         </div>
         <TableComp className="my-5" users={users} />

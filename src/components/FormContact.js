@@ -3,35 +3,11 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap"
 import { FaAddressCard, FaPhoneAlt } from "react-icons/fa"
 import { FiMail } from "react-icons/fi"
 import ReCAPTCHA from "react-google-recaptcha"
-// import emailjs from "emailjs-com"
-// import { navigate } from "gatsby"
+
 const FORMSPARK_ACTION_URL = "https://submit-form.com/FjhXcw2p"
 
 const FormContact = ({ heading, para }) => {
-  const [form, setForm] = useState("")
-  // const [loading, setLoading] = useState(false)
-  // const handleEmail = e => {
-  //   e.preventDefault()
-  //   setLoading(true)
-  //   emailjs
-  //     .sendForm(
-  //       "service_x5agap3",
-  //       "template_8upsmbs",
-  //       e.target,
-  //       "user_2ycGHDtiEG2OA8KCMYXOt"
-  //     )
-  //     .then(
-  //       result => {
-  //         console.log(result.text)
-  //         navigate("/thank-you1")
-  //         setLoading(false)
-  //       },
-  //       error => {
-  //         console.log(error.text)
-  //       }
-  //     )
-  //   e.target.reset()
-  // }
+  const [setForm] = useState("")
 
   const handleToken = token => {
     setForm(currentForm => {

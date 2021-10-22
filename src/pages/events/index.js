@@ -39,6 +39,7 @@ const events = () => {
                     <a
                       href="https://www.facebook.com/events/1066599086844546/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <button className="btn text-white hero-btn">
                         Read More

@@ -1,9 +1,7 @@
 import React from "react"
 import { Col, Container, Row } from "react-bootstrap"
-import HeroImg from "../../components/HeroImg"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import img from "../../assets/images/directors.svg"
 import { StaticImage } from "gatsby-plugin-image"
 import { SiFacebook, SiLinkedin, SiTwitter } from "react-icons/si"
 

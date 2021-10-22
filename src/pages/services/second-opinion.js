@@ -1,11 +1,8 @@
 import React from "react"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import img from "../../assets/images/opinion.svg"
-import HeroImg from "../../components/HeroImg"
 import { Col, Container, Row } from "react-bootstrap"
 import { StaticImage } from "gatsby-plugin-image"
-import ResearchForm from "../../components/ResearchForm"
 import CommercialForm from "../../components/CommercialForm"
 
 const secondOpinion = () => {

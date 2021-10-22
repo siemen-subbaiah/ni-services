@@ -4,7 +4,7 @@ import ReCAPTCHA from "react-google-recaptcha"
 const FORMSPARK_ACTION_URL = "https://submit-form.com/2QUL7r1d"
 
 const CommercialForm = () => {
-  const [form, setForm] = useState("")
+  const [setForm] = useState("")
   const handleToken = token => {
     setForm(currentForm => {
       return { ...currentForm, token }

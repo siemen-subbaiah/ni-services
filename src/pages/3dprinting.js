@@ -3,7 +3,6 @@ import { Container } from "react-bootstrap"
 import BackgroundImage from "../components/BackgroundImage"
 import CommercialForm from "../components/CommercialForm"
 import Layout from "../components/layout"
-import ResearchForm from "../components/ResearchForm"
 import Seo from "../components/seo"
 
 const threeprinting = () => {

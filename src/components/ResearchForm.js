@@ -1,36 +1,11 @@
 import React, { useState } from "react"
 import { Container, Form, Button } from "react-bootstrap"
-// import emailjs from "emailjs-com"
-// import { navigate } from "gatsby-link"
 import ReCAPTCHA from "react-google-recaptcha"
+
 const FORMSPARK_ACTION_URL = "https://submit-form.com/q4h1rlcY"
 
 const ResearchForm = () => {
-  const [form, setForm] = useState("")
-  // const [loading, setLoading] = useState(false)
-
-  // const handleEmail = e => {
-  //   e.preventDefault()
-  //   setLoading(true)
-  //   emailjs
-  //     .sendForm(
-  //       "service_x5agap3",
-  //       "template_5n21wsy",
-  //       e.target,
-  //       "user_2ycGHDtiEG2OA8KCMYXOt"
-  //     )
-  //     .then(
-  //       result => {
-  //         console.log(result.text)
-  //         setLoading(false)
-  //         navigate("/thank-you2")
-  //       },
-  //       error => {
-  //         console.log(error.text)
-  //       }
-  //     )
-  //   e.target.reset()
-  // }
+  const [setForm] = useState("")
 
   const handleToken = token => {
     setForm(currentForm => {

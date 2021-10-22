@@ -2,8 +2,6 @@ import React from "react"
 import { Container } from "react-bootstrap"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import img from "../../assets/images/team.svg"
-import HeroImg from "../../components/HeroImg"
 import TeamComp from "../../components/TeamComp"
 
 const Team = () => {

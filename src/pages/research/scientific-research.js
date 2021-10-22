@@ -1,8 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import img from "../../assets/images/scientific.svg"
-import HeroImg from "../../components/HeroImg"
 import { Container } from "react-bootstrap"
 import { Link } from "gatsby"
 

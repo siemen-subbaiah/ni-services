@@ -1,8 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import img from "../../assets/images/payments.svg"
-import HeroImg from "../../components/HeroImg"
 import { Col, Container, Row } from "react-bootstrap"
 import paytmImg from "../../assets/images/paytm.png"
 import bankImg from "../../assets/images/bank-transfer.png"

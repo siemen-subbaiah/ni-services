@@ -4,35 +4,11 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import bankImg from "../assets/images/bank-transfer.png"
 import ReCAPTCHA from "react-google-recaptcha"
-// import emailjs from "emailjs-com"
-// import { navigate } from "gatsby"
+
 const FORMSPARK_ACTION_URL = "https://submit-form.com/aG8nTrbX"
 
 const BankPayment = () => {
-  const [form, setForm] = useState("")
-  // const [loading, setLoading] = useState(false)
-  // const handleEmail = e => {
-  //   e.preventDefault()
-  //   setLoading(true)
-  //   emailjs
-  //     .sendForm(
-  //       "service_x5agap3",
-  //       "template_8upsmbs",
-  //       e.target,
-  //       "user_2ycGHDtiEG2OA8KCMYXOt"
-  //     )
-  //     .then(
-  //       result => {
-  //         console.log(result.text)
-  //         navigate("/thank-you3")
-  //         setLoading(false)
-  //       },
-  //       error => {
-  //         console.log(error.text)
-  //       }
-  //     )
-  //   e.target.reset()
-  // }
+  const [setForm] = useState("")
 
   const handleToken = token => {
     setForm(currentForm => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Col, Container, Form, Row, Button } from "react-bootstrap"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -11,8 +11,7 @@ import qrCode from "../assets/images/qr-code2.jpg"
 const FORMSPARK_ACTION_URL = "https://submit-form.com/rUSK5Dl0"
 
 const PaymentEvent = () => {
-  const [form, setForm] = useState("")
-  const [users, setUsers] = useState([])
+  const [setForm] = useState("")
 
   const handleToken = token => {
     setForm(currentForm => {
