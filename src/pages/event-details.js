@@ -4,6 +4,8 @@ import emailjs from "emailjs-com"
 import { navigate } from "gatsby-link"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { db } from "../constants/firebase"
+import { addDoc, collection, serverTimestamp } from "firebase/firestore"
 
 const EventDetails = () => {
   const [loading, setLoading] = useState(false)
@@ -15,40 +17,46 @@ const EventDetails = () => {
 
   const rand = Math.floor(Math.random() * (999 - 100 + 1) + 100)
 
-  const handleEmail = e => {
+  const handleEmail = async e => {
     e.preventDefault()
-    setLoading(true)
-    emailjs
-      .sendForm(
+
+    try {
+      setLoading(true)
+      await addDoc(collection(db, "users"), {
+        branch: profession,
+        designation,
+        email,
+        name,
+        number,
+        timeStamp: serverTimestamp(),
+      })
+      const data = await emailjs.sendForm(
         "service_pjnb6jh",
         "template_eqgjkus",
         e.target,
         "user_4R2FqenjHSloK3tZPzmV4"
       )
-      .then(
-        result => {
-          console.log(result.text)
-          navigate("/payment-event")
-          setLoading(false)
-        },
-        error => {
-          console.log(error.text)
-        }
-      )
+      const res = await data.text
+      setLoading(false)
+      navigate("/payment-event")
+      console.log(res)
+    } catch (error) {
+      alert(error)
+    }
 
-    // typeof window !== "undefined"
-    //   ? localStorage.setItem(
-    //       "data",
-    //       JSON.stringify({
-    //         name,
-    //         designation,
-    //         profession,
-    //         email,
-    //         number,
-    //         ref: `TD9${rand}`,
-    //       })
-    //     )
-    //   : null
+    typeof window !== "undefined"
+      ? localStorage.setItem(
+          "data",
+          JSON.stringify({
+            name,
+            designation,
+            profession,
+            email,
+            number,
+            ref: `TD9${rand}`,
+          })
+        )
+      : null
     e.target.reset()
   }
 

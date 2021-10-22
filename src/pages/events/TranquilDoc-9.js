@@ -1,12 +1,30 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import TranquilDoc from "../../assets/images/TranquilDoc.jpg"
 import { Link } from "gatsby"
 import { Container } from "react-bootstrap"
 import TableComp from "../../components/TableComp"
+import { collection, getDocs, orderBy, query } from "firebase/firestore"
+import { db } from "../../constants/firebase"
 
 const TranquilDoc9 = () => {
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const allUsers = query(
+        collection(db, "users"),
+        orderBy("timeStamp", "desc")
+      )
+      const userSnapShot = await getDocs(allUsers)
+      const userList = setUsers(userSnapShot.docs.map(doc => doc.data()))
+    }
+    getUsers()
+  }, [])
+
+  console.log(users)
+
   return (
     <Layout>
       <Seo Sitetitle="TranquilDoc-9" />
@@ -35,8 +53,9 @@ const TranquilDoc9 = () => {
           <Link to="/event-details">
             <button className="btn text-white hero-btn">Register</button>
           </Link>
+          <a href=""></a>
         </div>
-        <TableComp className="my-5" />
+        <TableComp className="my-5" users={users} />
       </Container>
     </Layout>
   )

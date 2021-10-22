@@ -1,14 +1,18 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Col, Container, Form, Row, Button } from "react-bootstrap"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ReCAPTCHA from "react-google-recaptcha"
-import paytmImg from "../assets/images/paytm.png"
+import gpay from "../assets/images/g-pay.png"
+import paytm from "../assets/images/paytmupi.png"
+import phonepay from "../assets/images/phonepay.png"
 import qrCode from "../assets/images/qr-code.jpg"
+
 const FORMSPARK_ACTION_URL = "https://submit-form.com/rUSK5Dl0"
 
 const PaymentEvent = () => {
   const [form, setForm] = useState("")
+  const [users, setUsers] = useState([])
 
   const handleToken = token => {
     setForm(currentForm => {
@@ -27,17 +31,39 @@ const PaymentEvent = () => {
       <Seo Sitetitle="Payment-PayTM" />
       <h2 className="mt-4 text-center">Event Payment</h2>
       <div className="underline"></div>
-      <h4 className="my-4 text-start text-lg-center">
-        Please make your payment by scanning the below QR code:
-      </h4>
       <Container>
         <Row className="justify-content-center align-items-center my-5">
           <Col lg={6} md={12}>
-            {/* <img src={paytmImg} alt="paytm-img" /> */}
-            <p className="my-3">Registration Fees : 1000Rs (GST 18%)</p>
+            <p className="my-3">
+              Registration Fees : 1180Rs (1000RS + GST 18%)
+            </p>
+            <div className="sup-apps d-flex justify-content-start align-items-center">
+              <a
+                href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for TranquilDoc-9
+ Event&cu=INR"
+              >
+                <img src={gpay} alt="gpay-logo" />
+              </a>
+              <a
+                href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for TranquilDoc-9
+ Event&cu=INR"
+              >
+                <img src={phonepay} alt="phonepay-logo" />
+              </a>
+              <a
+                href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for TranquilDoc-9
+ Event&cu=INR"
+              >
+                <img src={paytm} alt="paytm-logo" />
+              </a>
+            </div>
             <p>
               <strong>Mobile Number : </strong>
               9844546546
+            </p>
+            <p className="mb-4">
+              The QR Code can be scanned using any UPI supported apps or click
+              on the preferred apps above to donate.
             </p>
             <img src={qrCode} alt="qr-code" className="qr-img" />
           </Col>
@@ -50,7 +76,7 @@ const PaymentEvent = () => {
               <input
                 type="hidden"
                 name="_redirect"
-                value="https://nischidhaimagingservices.com/events/TranquilDoc-9"
+                value="http://localhost:8000/events/TranquilDoc-9"
               />
               <input
                 type="hidden"

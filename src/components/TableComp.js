@@ -1,7 +1,7 @@
 import React from "react"
 import { Table } from "react-bootstrap"
 
-const TableComp = () => {
+const TableComp = ({ users }) => {
   return (
     <Table striped bordered hover responsive>
       <thead>
@@ -13,24 +13,16 @@ const TableComp = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Associate</td>
-          <td>2017</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Developer</td>
-          <td>2018</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Larry</td>
-          <td>Technical Support</td>
-          <td>2021</td>
-        </tr>
+        {users?.map((user, i) => {
+          return (
+            <tr key={i}>
+              <td>{i + 1}</td>
+              <td>{user.name}</td>
+              <td>{user.designation}</td>
+              <td>{user.branch}</td>
+            </tr>
+          )
+        })}
       </tbody>
     </Table>
   )
