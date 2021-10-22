@@ -6,7 +6,7 @@ import ReCAPTCHA from "react-google-recaptcha"
 import gpay from "../assets/images/g-pay.png"
 import paytm from "../assets/images/paytmupi.png"
 import phonepay from "../assets/images/phonepay.png"
-import qrCode from "../assets/images/qr-code.jpg"
+import qrCode from "../assets/images/qr-code2.jpg"
 
 const FORMSPARK_ACTION_URL = "https://submit-form.com/rUSK5Dl0"
 
@@ -65,7 +65,7 @@ const PaymentEvent = () => {
               The QR Code can be scanned using any UPI supported apps or click
               on the preferred apps above to donate.
             </p>
-            <img src={qrCode} alt="qr-code" className="qr-img" />
+            <img src={qrCode} alt="qr-code" className="img-fluid qr-img2" />
           </Col>
           <Col lg={6} md={12}>
             <Form

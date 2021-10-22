@@ -50,10 +50,17 @@ const TranquilDoc9 = () => {
             {" "}
             <strong>Time :</strong> 18:00 - 23:45 hrs.
           </p>
-          <Link to="/event-details">
-            <button className="btn text-white hero-btn">Register</button>
-          </Link>
-          <a href=""></a>
+          <div className="btns">
+            <a
+              className="btn text-white hero-btn"
+              href="https://www.facebook.com/events/s/tranquidoc-9-infatuation/3074057026210813/"
+            >
+              FB Details{" "}
+            </a>
+            <Link to="/event-details">
+              <button className="btn text-white hero-btn">Register</button>
+            </Link>
+          </div>
         </div>
         <TableComp className="my-5" users={users} />
       </Container>
