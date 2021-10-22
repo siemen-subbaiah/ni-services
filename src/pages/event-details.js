@@ -44,19 +44,19 @@ const EventDetails = () => {
       alert(error)
     }
 
-    // typeof window !== "undefined"
-    //   ? localStorage.setItem(
-    //       "data",
-    //       JSON.stringify({
-    //         name,
-    //         designation,
-    //         profession,
-    //         email,
-    //         number,
-    //         ref: `TD9${rand}`,
-    //       })
-    //     )
-    //   : null
+    typeof window !== "undefined"
+      ? localStorage.setItem(
+          "data",
+          JSON.stringify({
+            name,
+            designation,
+            profession,
+            email,
+            number,
+            ref: `TD9${rand}`,
+          })
+        )
+      : null
     e.target.reset()
   }
 
