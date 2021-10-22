@@ -76,7 +76,7 @@ const PaymentEvent = () => {
               <input
                 type="hidden"
                 name="_redirect"
-                value="http://localhost:8000/events/TranquilDoc-9"
+                value="https://nischidhaimagingservices.com/events/TranquilDoc-9"
               />
               <input
                 type="hidden"
