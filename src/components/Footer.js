@@ -94,8 +94,8 @@ const Footer = () => {
               </p>
               <p>
                 Website developed by{" "}
-                <a className="colorr" href="https://www.droper.ml">
-                  Droper
+                <a className="colorr" href="https://weframe.tech">
+                  Weframe.tech
                 </a>
               </p>
             </Col>

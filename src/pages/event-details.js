@@ -20,7 +20,7 @@ import {
   orderBy,
 } from "firebase/firestore"
 
-const FORMSPARK_ACTION_URL = "https://submit-form.com/rUSK5Dl0"
+// const FORMSPARK_ACTION_URL = "https://submit-form.com/rUSK5Dl0"
 
 const EventDetails = () => {
   const [loading, setLoading] = useState(false)
@@ -28,6 +28,7 @@ const EventDetails = () => {
   const [designation, setDesignation] = useState("")
   const [profession, setProfession] = useState("")
   const [number, setNumber] = useState("")
+  const [transID, setTransID] = useState("")
   const [email, setEmail] = useState("")
   const [users, setUsers] = useState([])
 
@@ -83,25 +84,11 @@ const EventDetails = () => {
       )
       const res = await data.text
       setLoading(false)
+      navigate("/events/TranquilDoc-9")
       console.log(res)
     } catch (error) {
       alert(error)
     }
-
-    typeof window !== "undefined"
-      ? localStorage.setItem(
-          "data",
-          JSON.stringify({
-            name,
-            designation,
-            profession,
-            email,
-            number,
-            ref:
-              users[0]?.ref === undefined ? `TD91` : `TD9${users[0]?.ref + 1}`,
-          })
-        )
-      : null
     e.target.reset()
   }
 
@@ -113,8 +100,11 @@ const EventDetails = () => {
         <Row className="justify-content-center align-items-center my-5">
           <Col lg={6} md={12}>
             <p className="my-3">
-              Registration Fees : 1180Rs (1000RS + GST 18%)
+              {/* Registration Fees : 1180Rs (1000RS + GST 18%) */}
+              Registration fees: 1180rs ( 1000rs + GST 18%) till November 1st
+              2021.
             </p>
+            <p>After November 1st onwards 2360 (2000rs + GST 18%)</p>
             <div className="sup-apps d-flex justify-content-start align-items-center">
               <a
                 href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for TranquilDoc-9
@@ -146,27 +136,7 @@ const EventDetails = () => {
             <img src={qrCode} alt="qr-code" className="img-fluid qr-img2" />
           </Col>
           <Col>
-            <Form
-              className="my-form my-5"
-              method="POST"
-              action={FORMSPARK_ACTION_URL}
-              onSubmit={handleEmail}
-            >
-              <input
-                type="hidden"
-                name="_redirect"
-                value="https://nischidhaimagingservices.com/events/TranquilDoc-9"
-              />
-              <input
-                type="hidden"
-                name="_email.template.title"
-                value="Event Details"
-              />
-              <input
-                type="hidden"
-                name="_email.template.footer"
-                value="false"
-              />
+            <Form className="my-form my-5" method="POST" onSubmit={handleEmail}>
               <Form.Group controlId="exampleForm.ControlInput1">
                 <input
                   type="hidden"
@@ -233,6 +203,26 @@ const EventDetails = () => {
                   onChange={e => setEmail(e.target.value)}
                 />
               </Form.Group>
+              <Form.Group controlId="exampleForm.ControlInput1">
+                <p>
+                  After successful payment, please enter the transaction number:
+                </p>
+                <Form.Label>Transaction Number</Form.Label>
+                <Form.Control
+                  type="number"
+                  required
+                  name="transID"
+                  value={transID}
+                  onChange={e => setTransID(e.target.value)}
+                />
+              </Form.Group>
+              <div className="g-recaptcha my-3">
+                <ReCAPTCHA
+                  sitekey="6LelwgsbAAAAABnPca5i0OkuvByGedUq4Tr1M9CF"
+                  onChange={handleToken}
+                  onExpired={handleExpire}
+                />
+              </div>
               {loading ? (
                 <div className="d-grid gap-2">
                   <Button className="hero-btn my-2" disabled>
@@ -254,101 +244,6 @@ const EventDetails = () => {
                   </Button>
                 </div>
               )}
-            </Form>
-            <Form
-              className="my-form my-3 my-lg-0"
-              method="POST"
-              action={FORMSPARK_ACTION_URL}
-            >
-              <input
-                type="hidden"
-                name="_redirect"
-                value="https://nischidhaimagingservices.com/events/TranquilDoc-9"
-              />
-              <input
-                type="hidden"
-                name="_email.template.title"
-                value="Event Details"
-              />
-              <input
-                type="hidden"
-                name="_email.template.footer"
-                value="false"
-              />
-
-              <input
-                type="hidden"
-                name="Name"
-                value={
-                  typeof window !== "undefined"
-                    ? JSON.parse(localStorage.getItem("data"))?.name
-                    : null
-                }
-              />
-              <input
-                type="hidden"
-                name="Designation"
-                value={
-                  typeof window !== "undefined"
-                    ? JSON.parse(localStorage.getItem("data"))?.designation
-                    : null
-                }
-              />
-              <input
-                type="hidden"
-                name="Profession"
-                value={
-                  typeof window !== "undefined"
-                    ? JSON.parse(localStorage.getItem("data"))?.profession
-                    : null
-                }
-              />
-              <input
-                type="hidden"
-                name="Email"
-                value={
-                  typeof window !== "undefined"
-                    ? JSON.parse(localStorage.getItem("data"))?.email
-                    : null
-                }
-              />
-              <input
-                type="hidden"
-                name="Number"
-                value={
-                  typeof window !== "undefined"
-                    ? JSON.parse(localStorage.getItem("data"))?.number
-                    : null
-                }
-              />
-              <input
-                type="hidden"
-                name="reference_id"
-                value={
-                  typeof window !== "undefined"
-                    ? JSON.parse(localStorage.getItem("data"))?.ref
-                    : null
-                }
-              />
-              <Form.Group controlId="exampleForm.ControlInput1">
-                <p>
-                  After successful payment, please enter the transaction number:
-                </p>
-                <Form.Label>Transaction Number</Form.Label>
-                <Form.Control type="number" required name="transaction-id" />
-              </Form.Group>
-              <div className="g-recaptcha my-3">
-                <ReCAPTCHA
-                  sitekey="6LelwgsbAAAAABnPca5i0OkuvByGedUq4Tr1M9CF"
-                  onChange={handleToken}
-                  onExpired={handleExpire}
-                />
-              </div>
-              <div className="d-grid gap-2">
-                <Button className="hero-btn my-2" type="submit" aria-required>
-                  submit
-                </Button>
-              </div>
             </Form>
           </Col>
         </Row>
