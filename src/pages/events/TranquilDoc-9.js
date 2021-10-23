@@ -7,6 +7,8 @@ import { Container } from "react-bootstrap"
 import TableComp from "../../components/TableComp"
 import { collection, getDocs, orderBy, query } from "firebase/firestore"
 import { db } from "../../constants/firebase"
+import sponser1 from "../../assets/images/sponser1.png"
+import sponser2 from "../../assets/images/sponser2.png"
 
 const TranquilDoc9 = () => {
   const [users, setUsers] = useState([])
@@ -15,7 +17,7 @@ const TranquilDoc9 = () => {
     const getUsers = async () => {
       const allUsers = query(
         collection(db, "users"),
-        orderBy("timeStamp", "desc")
+        orderBy("timeStamp", "asc")
       )
       const userSnapShot = await getDocs(allUsers)
       const userList = setUsers(userSnapShot.docs.map(doc => doc.data()))
@@ -56,6 +58,18 @@ const TranquilDoc9 = () => {
             <a href="https://facebook.com/events/s/tranquidoc-9-infatuation/3074057026210813/">
               Check updates in{" "}
               <span style={{ color: "#3b5998 " }}>Facebook</span>
+            </a>
+          </div>
+          <div className="my-1 d-flex align-items-center  flex-column flex-lg-row">
+            <a href="https://www.instagram.com/buyoproperty/?utm_medium=copy_link">
+              <img src={sponser1} alt="sponser" className="sponser img-fluid" />
+            </a>
+            <a href="https://www.instagram.com/buyoproperty/?utm_medium=copy_link">
+              <img
+                src={sponser2}
+                alt="sponser img-fluid"
+                className="sponser2 ms-0 my-2 my-lg-0 ms-lg-4"
+              />
             </a>
           </div>
         </div>

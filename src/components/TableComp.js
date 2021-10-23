@@ -6,7 +6,7 @@ const TableComp = ({ users }) => {
     <Table striped bordered hover responsive>
       <thead>
         <tr>
-          <th>Sl no</th>
+          <th>ID No</th>
           <th>Name</th>
           <th>Designation</th>
           <th>Branch</th>
@@ -16,7 +16,7 @@ const TableComp = ({ users }) => {
         {users?.map((user, i) => {
           return (
             <tr key={i}>
-              <td>{i + 1}</td>
+              <td>{`TD9${user.ref}`}</td>
               <td>{user.name}</td>
               <td>{user.designation}</td>
               <td>{user.branch}</td>

@@ -1,11 +1,18 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Button, Container, Form, Spinner } from "react-bootstrap"
 import emailjs from "emailjs-com"
 import { navigate } from "gatsby-link"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { db } from "../constants/firebase"
-import { addDoc, collection, serverTimestamp } from "firebase/firestore"
+import {
+  addDoc,
+  collection,
+  serverTimestamp,
+  query,
+  getDocs,
+  orderBy,
+} from "firebase/firestore"
 
 const EventDetails = () => {
   const [loading, setLoading] = useState(false)
@@ -14,8 +21,24 @@ const EventDetails = () => {
   const [profession, setProfession] = useState("")
   const [number, setNumber] = useState("")
   const [email, setEmail] = useState("")
+  const [users, setUsers] = useState([])
 
-  const rand = Math.floor(Math.random() * (999 - 100 + 1) + 100)
+  // const rand = Math.floor(Math.random() * (999 - 100 + 1) + 100)
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const allUsers = query(
+        collection(db, "users"),
+        orderBy("timeStamp", "desc")
+      )
+      const userSnapShot = await getDocs(allUsers)
+      const userList = setUsers(userSnapShot.docs.map(doc => doc.data()))
+      console.log(userList)
+    }
+    getUsers()
+  }, [])
+
+  console.log(users[0]?.ref)
 
   const handleEmail = async e => {
     e.preventDefault()
@@ -28,6 +51,7 @@ const EventDetails = () => {
         email,
         name,
         number,
+        ref: users[0]?.ref === undefined ? 1 : users[0]?.ref + 1,
         timeStamp: serverTimestamp(),
       })
       const data = await emailjs.sendForm(
@@ -53,7 +77,8 @@ const EventDetails = () => {
             profession,
             email,
             number,
-            ref: `TD9${rand}`,
+            ref:
+              users[0]?.ref === undefined ? `TD91` : `TD9${users[0]?.ref + 1}`,
           })
         )
       : null
@@ -67,7 +92,13 @@ const EventDetails = () => {
         <h1 className="text-center my-5">Register for the event</h1>
         <Form className="my-form my-5" onSubmit={handleEmail}>
           <Form.Group controlId="exampleForm.ControlInput1">
-            <input type="hidden" name="reference_id" value={`TD9${rand}`} />
+            <input
+              type="hidden"
+              name="reference_id"
+              value={
+                users[0]?.ref === undefined ? `TD91` : `TD9${users[0]?.ref + 1}`
+              }
+            />
             <Form.Label>Name</Form.Label>
             <Form.Control
               type="text"
@@ -103,11 +134,13 @@ const EventDetails = () => {
           <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>Phone Number</Form.Label>
             <Form.Control
-              type="number"
+              type="tel"
               placeholder="Enter your phone number"
               required
               name="number"
               value={number}
+              pattern="[1-9]{1}[0-9]{9}"
+              maxLength="10"
               onChange={e => setNumber(e.target.value)}
             />
           </Form.Group>

@@ -465,6 +465,13 @@ footer {
   height: 300px !important;
 }
 
+.sponser {
+  height: 50px !important;
+}
+.sponser2 {
+  height: 200px !important;
+}
+
 @media (max-width: 600px) {
   .qr-img2 {
     height: initial !important;
