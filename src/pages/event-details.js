@@ -101,7 +101,7 @@ const EventDetails = () => {
           <Col lg={6} md={12}>
             <p className="my-3">
               {/* Registration Fees : 1180Rs (1000RS + GST 18%) */}
-              Registration fees: 1180rs ( 1000rs + GST 18%) till November 1st
+              Registration fees: 1180rs ( 1000rs + GST 18%) till November 10st
               2021.
             </p>
             <p>After November 1st onwards 2360 (2000rs + GST 18%)</p>
