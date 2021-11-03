@@ -104,7 +104,7 @@ const EventDetails = () => {
               Registration fees: 1180rs ( 1000rs + GST 18%) till November 10th
               2021.
             </p>
-            <p>After November 1st onwards 2360 (2000rs + GST 18%)</p>
+            <p>After November 10th onwards 2360 (2000rs + GST 18%)</p>
             <div className="sup-apps d-flex justify-content-start align-items-center">
               <a
                 href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for TranquilDoc-9
