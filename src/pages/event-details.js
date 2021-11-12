@@ -99,11 +99,7 @@ const EventDetails = () => {
       <Container>
         <Row className="justify-content-center align-items-center my-5">
           <Col lg={6} md={12}>
-            <p className="my-3">
-              {/* Registration Fees : 1180Rs (1000RS + GST 18%) */}
-              Registration fees: 1180rs ( 1000rs + GST 18%) till November 10th
-              2021.
-            </p>
+            
             <p>After November 10th onwards 2360 (2000rs + GST 18%)</p>
             <div className="sup-apps d-flex justify-content-start align-items-center">
               <a
