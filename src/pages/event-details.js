@@ -9,6 +9,7 @@ import gpay from "../assets/images/g-pay.png"
 import paytm from "../assets/images/paytmupi.png"
 import phonepay from "../assets/images/phonepay.png"
 import qrCode from "../assets/images/qr-code2.jpg"
+import qrCode2 from "../assets/images/pay.jpeg"
 import ReCAPTCHA from "react-google-recaptcha"
 
 import {
@@ -129,7 +130,7 @@ const EventDetails = () => {
               The QR Code can be scanned using any UPI supported apps or click
               on the preferred apps above to donate.
             </p>
-            <img src={qrCode} alt="qr-code" className="img-fluid qr-img2" />
+            <img src={qrCode2} alt="qr-code" className="img-fluid qr-img2" />
           </Col>
           <Col>
             <Form className="my-form my-5" method="POST" onSubmit={handleEmail}>
