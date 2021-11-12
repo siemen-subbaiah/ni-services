@@ -100,7 +100,7 @@ const EventDetails = () => {
         <Row className="justify-content-center align-items-center my-5">
           <Col lg={6} md={12}>
             
-            <p>After November 10th onwards 2360 (2000rs + GST 18%)</p>
+            <p>Registration fees 2360 (2000rs + GST 18%)</p>
             <div className="sup-apps d-flex justify-content-start align-items-center">
               <a
                 href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for TranquilDoc-9
