@@ -9,6 +9,7 @@ import gpay from "../assets/images/g-pay.png"
 import paytm from "../assets/images/paytmupi.png"
 import phonepay from "../assets/images/phonepay.png"
 import qrCode from "../assets/images/qr-code2.jpg"
+import qrCode2 from "../assets/images/pay.jpeg"
 import ReCAPTCHA from "react-google-recaptcha"
 
 import {
@@ -99,12 +100,8 @@ const EventDetails = () => {
       <Container>
         <Row className="justify-content-center align-items-center my-5">
           <Col lg={6} md={12}>
-            <p className="my-3">
-              {/* Registration Fees : 1180Rs (1000RS + GST 18%) */}
-              Registration fees: 1180rs ( 1000rs + GST 18%) till November 1st
-              2021.
-            </p>
-            <p>After November 1st onwards 2360 (2000rs + GST 18%)</p>
+            
+            <p>Registration fees 2360 (2000rs + GST 18%)</p>
             <div className="sup-apps d-flex justify-content-start align-items-center">
               <a
                 href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for TranquilDoc-9
@@ -133,7 +130,7 @@ const EventDetails = () => {
               The QR Code can be scanned using any UPI supported apps or click
               on the preferred apps above to donate.
             </p>
-            <img src={qrCode} alt="qr-code" className="img-fluid qr-img2" />
+            <img src={qrCode2} alt="qr-code" className="img-fluid qr-img2" />
           </Col>
           <Col>
             <Form className="my-form my-5" method="POST" onSubmit={handleEmail}>

@@ -45,7 +45,7 @@ const TranquilDoc9 = () => {
           </p>
           <p className="text-start">
             {" "}
-            <strong>Date :</strong> 06th November 2021
+            <strong>Date :</strong> 13th November 2021
           </p>
           <p className="text-start">
             {" "}
