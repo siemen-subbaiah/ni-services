@@ -10,32 +10,20 @@ import animation from "../assets/animation.mp4"
 const Hero = () => {
   return (
     <section className="hero">
-      <Carousel fade prevLabel="" nextLabel="" className="d-lg-block d-none">
+      <Carousel fade prevLabel="" nextLabel="">
         <Carousel.Item>
           <div className="hero-img-container">
-            <img
-              src={slider4}
-              className="hero-img d-lg-block d-none"
-              alt="First slide"
-            />
+            <img src={slider4} className="hero-img" alt="First slide" />
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div className="hero-img-container">
-            <img
-              src={slider3}
-              className="hero-img d-lg-block d-none"
-              alt="Second slide"
-            />
+            <img src={slider3} className="hero-img" alt="Second slide" />
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div className="hero-img-container">
-            <img
-              src={slider2}
-              className="hero-img d-lg-block d-none"
-              alt="Third slide"
-            />
+            <img src={slider2} className="hero-img" alt="Third slide" />
           </div>
         </Carousel.Item>
         <Carousel.Item>
@@ -50,11 +38,11 @@ const Hero = () => {
         </Carousel.Item>
       </Carousel>
 
-      <section className="lottie-hero d-lg-none d-block">
+      {/* <section className="lottie-hero d-lg-none d-block">
         <video autoPlay loop muted playsInline>
           <source src={animation} type="video/mp4" />
         </video>
-      </section>
+      </section> */}
     </section>
   )
 }

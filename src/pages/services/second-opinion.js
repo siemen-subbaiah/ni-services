@@ -3,7 +3,8 @@ import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import { Col, Container, Row } from "react-bootstrap"
 import { StaticImage } from "gatsby-plugin-image"
-import CommercialForm from "../../components/CommercialForm"
+// import CommercialForm from "../../components/CommercialForm"
+import SecondOpinionForm from "../../components/SecondOpinionForm"
 
 const secondOpinion = () => {
   return (
@@ -37,7 +38,7 @@ const secondOpinion = () => {
             </Col>
           </Row>
         </div>
-        <CommercialForm />
+        <SecondOpinionForm />
       </Container>
     </Layout>
   )
