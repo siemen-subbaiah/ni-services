@@ -8,7 +8,7 @@ import { db } from "../constants/firebase"
 import gpay from "../assets/images/g-pay.png"
 import paytm from "../assets/images/paytmupi.png"
 import phonepay from "../assets/images/phonepay.png"
-import qrCode2 from "../assets/images/pay.jpeg"
+import qrCode2 from "../assets/images/payme.jpeg"
 import ReCAPTCHA from "react-google-recaptcha"
 
 import {
@@ -103,19 +103,19 @@ const EventDetails = () => {
             <div className="sup-apps d-flex justify-content-start align-items-center">
               <a
                 href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for Tranquildoc-10: Reigning
- Event&cu=INR"
+ Event&cu=INR&am=2000"
               >
                 <img src={gpay} alt="gpay-logo" />
               </a>
               <a
                 href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for Tranquildoc-10: Reigning
- Event&cu=INR"
+ Event&cu=INR&am=2000"
               >
                 <img src={phonepay} alt="phonepay-logo" />
               </a>
               <a
                 href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for Tranquildoc-10: Reigning
- Event&cu=INR"
+ Event&cu=INR&am=2000"
               >
                 <img src={paytm} alt="paytm-logo" />
               </a>
