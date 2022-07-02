@@ -8,7 +8,6 @@ import { db } from "../constants/firebase"
 import gpay from "../assets/images/g-pay.png"
 import paytm from "../assets/images/paytmupi.png"
 import phonepay from "../assets/images/phonepay.png"
-import qrCode from "../assets/images/qr-code2.jpg"
 import qrCode2 from "../assets/images/pay.jpeg"
 import ReCAPTCHA from "react-google-recaptcha"
 
@@ -52,7 +51,7 @@ const EventDetails = () => {
   useEffect(() => {
     const getUsers = async () => {
       const allUsers = query(
-        collection(db, "users"),
+        collection(db, "users2"),
         orderBy("timeStamp", "desc")
       )
       const userSnapShot = await getDocs(allUsers)
@@ -68,7 +67,7 @@ const EventDetails = () => {
 
     try {
       setLoading(true)
-      await addDoc(collection(db, "users"), {
+      await addDoc(collection(db, "users2"), {
         branch: profession,
         designation,
         email,
@@ -79,13 +78,13 @@ const EventDetails = () => {
       })
       const data = await emailjs.sendForm(
         "service_pjnb6jh",
-        "template_eqgjkus",
+        "template_gqva02p",
         e.target,
         "user_4R2FqenjHSloK3tZPzmV4"
       )
       const res = await data.text
       setLoading(false)
-      navigate("/events/TranquilDoc-9")
+      navigate("/events/TranquilDoc-10")
       console.log(res)
     } catch (error) {
       alert(error)
@@ -100,23 +99,22 @@ const EventDetails = () => {
       <Container>
         <Row className="justify-content-center align-items-center my-5">
           <Col lg={6} md={12}>
-            
-            <p>Registration fees 2360 (2000rs + GST 18%)</p>
+            <p>Registration fees: 2000rs</p>
             <div className="sup-apps d-flex justify-content-start align-items-center">
               <a
-                href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for TranquilDoc-9
+                href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for Tranquildoc-10: Reigning
  Event&cu=INR"
               >
                 <img src={gpay} alt="gpay-logo" />
               </a>
               <a
-                href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for TranquilDoc-9
+                href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for Tranquildoc-10: Reigning
  Event&cu=INR"
               >
                 <img src={phonepay} alt="phonepay-logo" />
               </a>
               <a
-                href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for TranquilDoc-9
+                href="upi://pay?pa=dhananjayakvn@okhdfcbank&pn=Dhananjaya K V N&tn=Payment for Tranquildoc-10: Reigning
  Event&cu=INR"
               >
                 <img src={paytm} alt="paytm-logo" />
@@ -140,8 +138,8 @@ const EventDetails = () => {
                   name="reference_id"
                   value={
                     users[0]?.ref === undefined
-                      ? `TD91`
-                      : `TD9${users[0]?.ref + 1}`
+                      ? `TD101`
+                      : `TD10${users[0]?.ref + 1}`
                   }
                 />
                 <Form.Label>Name</Form.Label>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import TranquilDoc from "../../assets/images/TranquilDoc.jpg"
+import TranquilDoc10Img from "../../assets/images/TranquilDoc-10.jpeg"
 import { Link } from "gatsby"
 import { Container } from "react-bootstrap"
 import TableComp from "../../components/TableComp"
@@ -10,13 +11,13 @@ import { db } from "../../constants/firebase"
 import sponser1 from "../../assets/images/sponser1.png"
 import sponser2 from "../../assets/images/sponser2.png"
 
-const TranquilDoc9 = () => {
+const TranquilDoc10 = () => {
   const [users, setUsers] = useState([])
 
   useEffect(() => {
     const getUsers = async () => {
       const allUsers = query(
-        collection(db, "users"),
+        collection(db, "users2"),
         orderBy("timeStamp", "asc")
       )
       const userSnapShot = await getDocs(allUsers)
@@ -28,39 +29,38 @@ const TranquilDoc9 = () => {
 
   return (
     <Layout>
-      <Seo Sitetitle="TranquilDoc-9" />
+      <Seo Sitetitle="TranquilDoc-10" />
       <Container className="my-5">
         <div className="service-h-card my-5">
           <div className="text-center">
-            <img src={TranquilDoc} alt="TranquilDoc-img" className="tran2" />
+            <img
+              src={TranquilDoc10Img}
+              alt="Tranquil10-img"
+              className="tran2 mb-5"
+            />
           </div>
-          <h4>TranquilDoc-9: Infatuation</h4>
+          <h4>Tranquildoc-10: Reigning</h4>
           <p className="text-start">
-            TranquilDoc is back after COVID19 pandemic. It's a series of event
-            for all the young hard working dynamic doctors. Rejuvenate, Rejoice
-            and reload.
-          </p>
-          <p className="text-start">
-            <strong>Venue :</strong> Angrezi- Bollywood bar and Kitchen
+            <strong>Venue :</strong> Skyye, UB City, Bengaluru
           </p>
           <p className="text-start">
             {" "}
-            <strong>Date :</strong> 13th November 2021
+            <strong>Date :</strong> 23rd July 2022
           </p>
           <p className="text-start">
             {" "}
-            <strong>Time :</strong> 18:00 - 23:45 hrs.
+            <strong>Time :</strong> 8PM - 12AM.
           </p>
-          {/* <Link to="/event-details">
+          <Link to="/event-details">
             <button className="btn text-white hero-btn">Register</button>
-          </Link> */}
-          <div className="my-3">
+          </Link>
+          {/* <div className="my-3">
             <a href="https://facebook.com/events/s/tranquidoc-9-infatuation/3074057026210813/">
               Check updates in{" "}
               <span style={{ color: "#3b5998 " }}>Facebook</span>
             </a>
-          </div>
-          <div className="my-1 d-flex align-items-center  flex-column flex-lg-row">
+          </div> */}
+          {/* <div className="my-1 d-flex align-items-center  flex-column flex-lg-row">
             <a href="https://www.instagram.com/buyoproperty/?utm_medium=copy_link">
               <img src={sponser1} alt="sponser" className="sponser img-fluid" />
             </a>
@@ -71,7 +71,7 @@ const TranquilDoc9 = () => {
                 className="sponser2 ms-0 my-2 my-lg-0 ms-lg-4"
               />
             </a>
-          </div>
+          </div> */}
         </div>
         <TableComp className="my-5" users={users} />
       </Container>
@@ -79,4 +79,4 @@ const TranquilDoc9 = () => {
   )
 }
 
-export default TranquilDoc9
+export default TranquilDoc10
