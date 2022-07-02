@@ -30,6 +30,7 @@ const EventDetails = () => {
   const [number, setNumber] = useState("")
   const [transID, setTransID] = useState("")
   const [email, setEmail] = useState("")
+  const [city, setCity] = useState("")
   const [users, setUsers] = useState([])
 
   // const rand = Math.floor(Math.random() * (999 - 100 + 1) + 100)
@@ -73,6 +74,7 @@ const EventDetails = () => {
         email,
         name,
         number,
+        city,
         ref: users[0]?.ref === undefined ? 1 : users[0]?.ref + 1,
         timeStamp: serverTimestamp(),
       })
@@ -196,6 +198,17 @@ const EventDetails = () => {
                   name="email"
                   value={email}
                   onChange={e => setEmail(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group controlId="exampleForm.ControlInput1">
+                <Form.Label>City/Town</Form.Label>
+                <Form.Control
+                  type="name"
+                  placeholder="Enter your city/town"
+                  required
+                  name="city"
+                  value={city}
+                  onChange={e => setCity(e.target.value)}
                 />
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlInput1">

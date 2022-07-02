@@ -54,6 +54,12 @@ const TranquilDoc10 = () => {
           <Link to="/event-details">
             <button className="btn text-white hero-btn">Register</button>
           </Link>
+          <div className="my-3">
+            <a href="https://m.facebook.com/story.php?story_fbid=pfbid027bs2M9RDWDreVqEzRRddtAUKDKjj1dxznHTNNKcRikPxTs6zxgJMS6Cs6sfi7DWLl&id=770927989">
+              Check updates in{" "}
+              <span style={{ color: "#3b5998 " }}>Facebook</span>
+            </a>
+          </div>
           {/* <div className="my-3">
             <a href="https://facebook.com/events/s/tranquidoc-9-infatuation/3074057026210813/">
               Check updates in{" "}

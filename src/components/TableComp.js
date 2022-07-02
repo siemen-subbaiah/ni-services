@@ -10,6 +10,7 @@ const TableComp = ({ users }) => {
           <th>Name</th>
           <th>Designation</th>
           <th>Branch</th>
+          <th>City/Town</th>
         </tr>
       </thead>
       <tbody>
@@ -20,6 +21,7 @@ const TableComp = ({ users }) => {
               <td>{user.name}</td>
               <td>{user.designation}</td>
               <td>{user.branch}</td>
+              <td>{user.city}</td>
             </tr>
           )
         })}
