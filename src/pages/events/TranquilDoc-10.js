@@ -52,7 +52,7 @@ const TranquilDoc10 = () => {
             <strong>Time :</strong> 8PM - 12AM.
           </p>
           <div className="my-3">
-            <a href="https://m.facebook.com/story.php?story_fbid=pfbid027bs2M9RDWDreVqEzRRddtAUKDKjj1dxznHTNNKcRikPxTs6zxgJMS6Cs6sfi7DWLl&id=770927989">
+            <a href="https://www.facebook.com/events/736134024379114/?mibextid=1BN32l">
               Check updates in{" "}
               <span style={{ color: "#3b5998 " }}>Facebook</span>
             </a>
