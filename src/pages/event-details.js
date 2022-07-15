@@ -24,6 +24,7 @@ import {
 
 const EventDetails = () => {
   const [loading, setLoading] = useState(false)
+  const [code, setCode] = useState("")
   const [name, setName] = useState("")
   const [designation, setDesignation] = useState("")
   const [profession, setProfession] = useState("")
@@ -66,32 +67,36 @@ const EventDetails = () => {
   const handleEmail = async e => {
     e.preventDefault()
 
-    try {
-      setLoading(true)
-      await addDoc(collection(db, "users2"), {
-        branch: profession,
-        designation,
-        email,
-        name,
-        number,
-        city,
-        ref: users[0]?.ref === undefined ? 1 : users[0]?.ref + 1,
-        timeStamp: serverTimestamp(),
-      })
-      const data = await emailjs.sendForm(
-        "service_pjnb6jh",
-        "template_gqva02p",
-        e.target,
-        "user_4R2FqenjHSloK3tZPzmV4"
-      )
-      const res = await data.text
-      setLoading(false)
-      navigate("/events/TranquilDoc-10")
-      console.log(res)
-    } catch (error) {
-      alert(error)
+    if (code === "TD10R") {
+      try {
+        setLoading(true)
+        await addDoc(collection(db, "users2"), {
+          branch: profession,
+          designation,
+          email,
+          name,
+          number,
+          city,
+          ref: users[0]?.ref === undefined ? 1 : users[0]?.ref + 1,
+          timeStamp: serverTimestamp(),
+        })
+        const data = await emailjs.sendForm(
+          "service_pjnb6jh",
+          "template_gqva02p",
+          e.target,
+          "user_4R2FqenjHSloK3tZPzmV4"
+        )
+        const res = await data.text
+        setLoading(false)
+        navigate("/events/TranquilDoc-10")
+        console.log(res)
+      } catch (error) {
+        alert(error)
+      }
+      e.target.reset()
+    } else {
+      alert("Invalid code")
     }
-    e.target.reset()
   }
 
   return (
@@ -134,6 +139,17 @@ const EventDetails = () => {
           </Col>
           <Col>
             <Form className="my-form my-5" method="POST" onSubmit={handleEmail}>
+              <Form.Group controlId="exampleForm.ControlInput1">
+                <Form.Label>Code</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter code"
+                  required
+                  name="code"
+                  value={code}
+                  onChange={e => setCode(e.target.value)}
+                />
+              </Form.Group>
               <Form.Group controlId="exampleForm.ControlInput1">
                 <input
                   type="hidden"
@@ -217,10 +233,12 @@ const EventDetails = () => {
                 </p>
                 <Form.Label>Transaction Number</Form.Label>
                 <Form.Control
-                  type="number"
+                  type="tel"
                   required
                   name="transID"
                   value={transID}
+                  pattern="[1-9]{1}[0-9]{9}"
+                  maxLength="10"
                   onChange={e => setTransID(e.target.value)}
                 />
               </Form.Group>
